@@ -1,0 +1,70 @@
+STAN_ - Станок
+
+FARTUK - КОМПЛЕКТУЮЩИЕ УЗЛЫ FARTUK
+ 
+KORPOD - КОРОБКА ПОДАЧИ
+
+SPINBAB - ШПИНДЕЛЬНАЯ БАБКА
+
+ZADBAB - ЗАДНЯЯ БАБКА
+
+POLSUP - ПОЛЗУШКА СУППОРТ
+
+ROLSGLAZ  - РОЛИКИ СГЛАЖИВАЮЩИЕ 
+
+ROLUPR - РОЛИКИ УПРОЧНЯЮЩИЕ 
+
+KARSUP - КАРЕТКА СУППОРТ
+
+MUFOBG - МУФТА ОБГОННАЯ
+
+REVGOL - РЕВОЛЬВЕРНАЯ ГОЛОВКА
+
+REZC - РЕЗЦЕДЕРЖАТЕЛЬ
+
+KILACH - КУЛАЧКИ 
+
+VAL - ВАЛ 
+
+VINT - ВИНТ 
+
+LINET - ЛЮНЕТ
+
+VILKI - ВИЛКИ
+
+KOLZUB - КОЛЕСО ЗУБЧАТОЕ
+
+SHEST - ШЕСТЕРНИ
+
+VILKA - ВИЛКА
+
+VINTY  - ВИНТЫ
+
+TRAPVINTI - ТРАП ВИНТЫ
+
+GAYKA - ГАЙКА
+
+KLIN - КЛИН 
+
+STANOK.RT - СТАНОК РТ
+
+STANOK. DIP - СТАНОК ДИП
+
+KOROBPODACH - КОРОБКА ПОДАЧ
+
+ZADNBABKA - ЗАДНЯЯ БАБКА
+
+LOTOKPODDON - ЛОТОК ПОДДОН
+
+NASOS - НАСОС 
+
+NAKLADKA - НАКЛАДКА
+
+REIKA - РЕЙКА
+
+SHESTS - ШЕСТЕРНИ
+
+SHPINDELZADNBAB-DIP300 -ШПИНДЕЛЬ ЗАДНЕЙ БАБКИ ДИП300
+
+SBORKA-ZADNBABKA - ЗАДНЯЯ БАБКА В СБОРЕ
+
