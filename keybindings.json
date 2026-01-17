@@ -1,0 +1,5 @@
+{
+  "key": "ctrl+alt+z",
+  "command": "undo",
+  "when": "explorerViewletVisible && filesExplorerFocus"
+}
