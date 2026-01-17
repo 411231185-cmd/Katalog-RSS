@@ -11,7 +11,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 CATALOG_FILE = BASE_DIR / "catalogs" / "ЭТАЛОННЫЙ есть UID и SKU22.12.csv"
 OUTPUT_FILE_ALL = BASE_DIR / "ТКП всех офферов.txt"
-OUTPUT_FILE_MACHINES = BASE_DIR / "ТКП станков"
+OUTPUT_FILE_MACHINES = BASE_DIR / "ТКП станков.txt"
 
 def load_catalog():
     """Загрузка каталога из CSV файла"""
@@ -25,9 +25,11 @@ def load_catalog():
                 print(f"✅ Каталог загружен: {len(df)} офферов, {len(df.columns)} колонок")
                 return df
         except Exception as e:
+            # Логируем ошибку для отладки
+            print(f"  Попытка с разделителем '{sep}' не удалась: {e}")
             continue
     
-    raise Exception("Не удалось загрузить каталог")
+    raise Exception("Не удалось загрузить каталог с известными разделителями")
 
 def generate_tkp(df, filter_machines=False):
     """Генерация ТКП из каталога"""
@@ -44,6 +46,7 @@ def generate_tkp(df, filter_machines=False):
     
     for idx, row in df.iterrows():
         # Получаем данные из строки
+        # SKU - основной идентификатор, Tilda UID используется как резервный идентификатор
         sku = row.get('SKU', row.get('Tilda UID', ''))
         title = row.get('Title', '')
         category = row.get('Category', '')
@@ -88,8 +91,6 @@ def save_tkp(lines, output_file):
     print(f"\nСохранение в: {output_file}")
     
     with open(output_file, 'w', encoding='utf-8') as f:
-        # Добавляем пустую строку в начало (как в оригинальном файле)
-        f.write("\n")
         for line in lines:
             f.write(line + "\n")
     

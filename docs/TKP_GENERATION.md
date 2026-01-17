@@ -31,7 +31,7 @@ python generate_tkp.py
 Скрипт создает два файла:
 
 1. **ТКП всех офферов.txt** - полный список всех товаров из каталога (494 оффера)
-2. **ТКП станков** - список только товаров, связанных со станками (484 оффера)
+2. **ТКП станков.txt** - список только товаров, связанных со станками (484 оффера)
 
 ## Формат выходных файлов
 
@@ -68,5 +68,5 @@ python generate_tkp.py
 ```python
 CATALOG_FILE = BASE_DIR / "catalogs" / "ЭТАЛОННЫЙ есть UID и SKU22.12.csv"
 OUTPUT_FILE_ALL = BASE_DIR / "ТКП всех офферов.txt"
-OUTPUT_FILE_MACHINES = BASE_DIR / "ТКП станков"
+OUTPUT_FILE_MACHINES = BASE_DIR / "ТКП станков.txt"
 ```
