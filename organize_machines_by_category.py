@@ -1,4 +1,78 @@
-# ТКП Станков - Навигация по Категориям
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Скрипт для организации ТКП станков по категориям
+Organizes machine TKP documents by category for easy navigation
+"""
+
+import os
+import shutil
+import json
+
+# Define machine categories based on user's request
+MACHINE_CATEGORIES = {
+    "Станки для железнодорожной отрасли": [
+        "Лентобандажировочный станок РТ5001.md",
+        "Лентобандажировочный станок РТ5003.md",
+        "Лентобандажировочный станок РТ5004.md",
+        "Токарно-накатной станок РТ301.md",
+        "Токарно-накатной станок РТ301.01.md",
+        "Токарно-накатной станок РТ301.02.md",
+        "Токарно-накатной станок РТ917.md"
+    ],
+    "Станки токарно-винторезные": [
+        "Токарно-винторезный станок 16К20.md",
+        "Токарно-винторезный станок 16Р25.md",
+        "Токарно-винторезный станок 1М63.md",
+        "Токарно-винторезный станок 16К40.md",
+        "Токарно-винторезный станок 1Н65.md",
+        "Токарно-винторезный станок РТ117.md",
+        "Токарно-винторезный станок РТ817.md"
+    ],
+    "Станки токарные трубонарезные": [
+        "Трубонарезной станок 1А983.md",
+        "Трубонарезной станок 1Н983.md",
+        "Трубонарезной станок РТ783.md"
+    ],
+    "Станки с ЧПУ": [
+        "Токарный станок РТ755Ф3.md",
+        "Токарный станок 16А20Ф3.md",
+        "Токарно-давильный станок РТ305М.md",
+        "Трубонарезной станок РТ779Ф3.md"
+    ]
+}
+
+def create_category_structure():
+    """Create category folder structure and move files"""
+    base_path = "docs/tkp_machines"
+    
+    # Create category folders
+    for category in MACHINE_CATEGORIES.keys():
+        category_path = os.path.join(base_path, category)
+        os.makedirs(category_path, exist_ok=True)
+        print(f"✓ Создана папка: {category}")
+    
+    # Move files to categories
+    for category, files in MACHINE_CATEGORIES.items():
+        category_path = os.path.join(base_path, category)
+        for filename in files:
+            src = os.path.join(base_path, filename)
+            dst = os.path.join(category_path, filename)
+            if os.path.exists(src):
+                shutil.move(src, dst)
+                print(f"  → Перемещен: {filename} в {category}")
+            else:
+                print(f"  ⚠ Не найден: {filename}")
+    
+    # Create category navigation README
+    create_category_readme(base_path)
+    
+    # Create index JSON
+    create_category_index(base_path)
+
+def create_category_readme(base_path):
+    """Create main README with category navigation"""
+    readme_content = """# ТКП Станков - Навигация по Категориям
 
 ## 📂 Категории Станков
 
@@ -76,3 +150,48 @@
 **Эталонные ТКП (самые подробные):**
 1. [Токарный станок РТ755Ф3](Станки%20с%20ЧПУ/Токарный%20станок%20РТ755Ф3.md) - 115 строк
 2. [Токарно-винторезный станок 1М63](Станки%20токарно-винторезные/Токарно-винторезный%20станок%201М63.md) - 112 строк
+"""
+    
+    with open(os.path.join(base_path, "README.md"), "w", encoding="utf-8") as f:
+        f.write(readme_content)
+    print("✓ Создан главный README с навигацией")
+
+def create_category_index(base_path):
+    """Create JSON index of all machines by category"""
+    index = {
+        "categories": {}
+    }
+    
+    for category, files in MACHINE_CATEGORIES.items():
+        index["categories"][category] = {
+            "count": len(files),
+            "machines": []
+        }
+        
+        for filename in files:
+            machine_name = filename.replace(".md", "")
+            index["categories"][category]["machines"].append({
+                "name": machine_name,
+                "filename": filename,
+                "path": f"{category}/{filename}"
+            })
+    
+    index["total_machines"] = sum(len(files) for files in MACHINE_CATEGORIES.values())
+    index["total_categories"] = len(MACHINE_CATEGORIES)
+    
+    with open(os.path.join(base_path, "машины_по_категориям.json"), "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+    print("✓ Создан JSON индекс машин по категориям")
+
+if __name__ == "__main__":
+    print("🚀 Организация ТКП станков по категориям...\n")
+    create_category_structure()
+    print("\n✅ Готово! Станки организованы по категориям.")
+    print("\n📁 Структура:")
+    print("  docs/tkp_machines/")
+    print("    ├── Станки для железнодорожной отрасли/")
+    print("    ├── Станки токарно-винторезные/")
+    print("    ├── Станки токарные трубонарезные/")
+    print("    ├── Станки с ЧПУ/")
+    print("    ├── README.md (навигация)")
+    print("    └── машины_по_категориям.json (индекс)")
