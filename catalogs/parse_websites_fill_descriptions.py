@@ -6,9 +6,10 @@ import time
 from urllib.parse import quote
 
 def search_on_rosstanko_com(product_title):
-    print(f"  rosstanko.com: {product_title[:50]}...")
+    if pd.isna(product_title): return None
+    print(f"  rosstanko.com: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://rosstanko.com/search?q={quote(product_title)}"
+        search_url = f"https://rosstanko.com/search?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
@@ -20,9 +21,10 @@ def search_on_rosstanko_com(product_title):
     return None
 
 def search_on_russtanko_rzn(product_title):
-    print(f"  russtanko-rzn.ru: {product_title[:50]}...")
+    if pd.isna(product_title): return None
+    print(f"  russtanko-rzn.ru: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://russtanko-rzn.ru/search?q={quote(product_title)}"
+        search_url = f"https://russtanko-rzn.ru/search?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
@@ -34,9 +36,10 @@ def search_on_russtanko_rzn(product_title):
     return None
 
 def search_on_stankoartel(product_title):
-    print(f"  stankoartel.com: {product_title[:50]}...")
+    if pd.isna(product_title): return None
+    print(f"  stankoartel.com: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://stankoartel.com/search?q={quote(product_title)}"
+        search_url = f"https://stankoartel.com/search?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
@@ -48,15 +51,22 @@ def search_on_stankoartel(product_title):
     return None
 
 print("="*80)
-print("ПАРСИНГ 3 САЙТОВ")
+print("ПАРСИНГ 3 САЙТОВ (ПРОДОЛЖЕНИЕ)")
 print("="*80)
 
 df = pd.read_csv('catalogs/MASTER_WITH_HTML_LINKS copy.csv', encoding='utf-8-sig')
-print(f"Загружено: {len(df)} офферов\n")
+print(f"Загружено: {len(df)} офферов")
+print(f"Продолжаем с оффера #504...\n")
 success = 0
 
-for idx, row in df.iterrows():
-    title = row['Title']
+for idx in range(503, len(df)):  # Начинаем с 504-го (индекс 503)
+    row = df.iloc[idx]
+    title = row.get('Title', '')
+    
+    if pd.isna(title) or str(title).strip() == '':
+        print(f"[{idx+1}/{len(df)}] ⚠️ Пустой Title, пропуск")
+        continue
+    
     print(f"[{idx+1}/{len(df)}] {title}")
     
     curr_text = str(row.get('Text', ''))
@@ -81,4 +91,4 @@ for idx, row in df.iterrows():
         print(f"\n💾 Сохранение...\n")
 
 df.to_csv('catalogs/MASTER_WITH_HTML_LINKS copy.csv', index=False, encoding='utf-8-sig')
-print(f"\n✅ Готово! Найдено: {success}/{len(df)}")
+print(f"\n✅ Готово! Найдено: {success} новых")
