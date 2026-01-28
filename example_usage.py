@@ -7,15 +7,32 @@
 """
 
 from optimize_catalog import CatalogOptimizer
+from pathlib import Path
+
+# Константа с путём к файлу (измените на ваш файл)
+CATALOG_FILE = "catalogs/Rezerv-FINAL-V3-20260128_161708.csv"
+
+
+def check_file_exists():
+    """Проверить существование файла каталога"""
+    if not Path(CATALOG_FILE).exists():
+        print(f"❌ Файл не найден: {CATALOG_FILE}")
+        print("\n💡 Измените константу CATALOG_FILE в этом скрипте на путь к вашему файлу")
+        return False
+    return True
+
 
 def example_full_optimization():
     """Пример полной оптимизации каталога"""
+    if not check_file_exists():
+        return
+        
     print("="*80)
     print("ПРИМЕР 1: ПОЛНАЯ ОПТИМИЗАЦИЯ")
     print("="*80)
     
     # Создаём оптимизатор
-    optimizer = CatalogOptimizer("catalogs/Rezerv-FINAL-V3-20260128_161708.csv")
+    optimizer = CatalogOptimizer(CATALOG_FILE)
     
     # Запускаем полную оптимизацию
     output_file = optimizer.run_full_optimization()
@@ -25,12 +42,15 @@ def example_full_optimization():
 
 def example_selective_optimization():
     """Пример выборочной оптимизации"""
+    if not check_file_exists():
+        return
+        
     print("\n" + "="*80)
     print("ПРИМЕР 2: ВЫБОРОЧНАЯ ОПТИМИЗАЦИЯ")
     print("="*80)
     
     # Создаём оптимизатор
-    optimizer = CatalogOptimizer("catalogs/Rezerv-FINAL-V3-20260128_161708.csv")
+    optimizer = CatalogOptimizer(CATALOG_FILE)
     
     # Запускаем только нужные методы
     print("\n1️⃣ Очистка цен...")
@@ -54,12 +74,15 @@ def example_selective_optimization():
 
 def example_custom_processing():
     """Пример кастомной обработки с доступом к DataFrame"""
+    if not check_file_exists():
+        return
+        
     print("\n" + "="*80)
     print("ПРИМЕР 3: КАСТОМНАЯ ОБРАБОТКА")
     print("="*80)
     
     # Создаём оптимизатор
-    optimizer = CatalogOptimizer("catalogs/Rezerv-FINAL-V3-20260128_161708.csv")
+    optimizer = CatalogOptimizer(CATALOG_FILE)
     
     # Получаем доступ к DataFrame
     df = optimizer.df
@@ -78,17 +101,23 @@ def example_custom_processing():
     print("\n📊 Топ-5 самых дорогих товаров:")
     top_5 = df.nlargest(5, 'Price')[['Title', 'Price', 'SKU']]
     for idx, row in top_5.iterrows():
-        print(f"   - {row['Title'][:50]}... | {row['Price']} руб.")
+        title = str(row['Title'])[:50]
+        if len(str(row['Title'])) > 50:
+            title += "..."
+        print(f"   - {title} | {row['Price']} руб.")
 
 
 def example_statistics():
     """Пример получения статистики"""
+    if not check_file_exists():
+        return
+        
     print("\n" + "="*80)
     print("ПРИМЕР 4: СТАТИСТИКА ОПТИМИЗАЦИИ")
     print("="*80)
     
     # Создаём оптимизатор
-    optimizer = CatalogOptimizer("catalogs/Rezerv-FINAL-V3-20260128_161708.csv")
+    optimizer = CatalogOptimizer(CATALOG_FILE)
     
     # Запускаем оптимизации
     optimizer.clean_prices()

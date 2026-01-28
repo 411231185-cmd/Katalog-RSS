@@ -27,6 +27,9 @@ class NumpyEncoder(json.JSONEncoder):
 class CatalogOptimizer:
     """Класс для оптимизации каталога товаров для Tilda"""
     
+    # Максимальное количество моделей для одного товара
+    MAX_MODELS_PER_PRODUCT = 10
+    
     # Паттерны для поиска моделей станков
     MACHINE_PATTERNS = [
         r'\b16К20\b', r'\b16К30\b', r'\b16К40\b', r'\b16М30Ф3\b', r'\b16А20Ф3\b',
@@ -98,7 +101,7 @@ class CatalogOptimizer:
                         self.df = df
                         print(f"✅ Каталог загружен: {len(df)} товаров, {len(df.columns)} колонок")
                         return
-                except:
+                except (UnicodeDecodeError, pd.errors.ParserError) as e:
                     continue
             raise Exception("Не удалось определить разделитель CSV")
         except Exception as e:
@@ -445,7 +448,7 @@ class CatalogOptimizer:
             
             # Price
             price = self.df.loc[idx, 'Price']
-            if pd.isna(price) or price < 0:
+            if pd.isna(price) or price <= 0:
                 row_errors.append(f"Строка {idx}: Некорректная цена")
             
             # Category
@@ -520,8 +523,10 @@ class CatalogOptimizer:
         for k, v in self.stats.items():
             if isinstance(v, list):
                 stats_json[k] = v
+            elif isinstance(v, (int, np.integer)):
+                stats_json[k] = int(v)
             else:
-                stats_json[k] = int(v) if isinstance(v, (int, type(pd.Int64Dtype))) else v
+                stats_json[k] = v
         
         report = {
             'timestamp': datetime.now().isoformat(),
@@ -591,16 +596,18 @@ class CatalogOptimizer:
             matches = re.findall(pattern, text, re.IGNORECASE)
             models.extend(matches)
         
-        # Убираем дубликаты и нормализуем
+        # Убираем дубликаты и нормализуем с помощью Unicode нормализации
+        import unicodedata
         unique_models = []
         seen = set()
         for model in models:
-            normalized = model.upper().replace('Ф', 'Ф').replace('К', 'К').replace('М', 'М').replace('Р', 'Р').replace('Н', 'Н')
+            # Нормализуем Unicode для корректной работы с кириллицей
+            normalized = unicodedata.normalize('NFC', model.upper())
             if normalized not in seen:
                 seen.add(normalized)
                 unique_models.append(model)
         
-        return unique_models[:10]  # Ограничиваем 10 моделями
+        return unique_models[:self.MAX_MODELS_PER_PRODUCT]
     
     def _normalize_category(self, category):
         """Нормализовать категорию"""
@@ -696,17 +703,24 @@ class CatalogOptimizer:
 def main():
     """Главная функция для запуска оптимизации"""
     import sys
+    from pathlib import Path
     
-    # Путь к входному файлу
-    input_file = "catalogs/Rezerv-FINAL-V3-20260128_161708.csv"
+    # Путь к входному файлу по умолчанию
+    default_file = "catalogs/Rezerv-FINAL-V3-20260128_161708.csv"
     
     # Если передан аргумент командной строки, используем его
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
+    else:
+        input_file = default_file
     
     # Проверяем существование файла
     if not Path(input_file).exists():
         print(f"❌ Файл не найден: {input_file}")
+        print("\n💡 Использование:")
+        print(f"   python {sys.argv[0]} <путь_к_каталогу.csv>")
+        print("\nПример:")
+        print(f"   python {sys.argv[0]} catalogs/my_catalog.csv")
         return
     
     # Создаём оптимизатор и запускаем полную оптимизацию
