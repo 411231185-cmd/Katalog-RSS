@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-01-28T12:06:01.583499",
+  "input_file": "catalogs/Rezerv-FINAL-V3-20260128_161708.csv",
+  "output_file": "catalogs/OPTIMIZED_CATALOG_20260128_120601.csv",
+  "total_products": 474,
+  "statistics": {
+    "prices_cleaned": 
