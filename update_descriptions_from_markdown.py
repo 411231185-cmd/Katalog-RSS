@@ -47,7 +47,7 @@ def parse_markdown_file(filepath):
     
     # Извлечение источника
     source_match = re.search(r'\*\*Источник:\*\* (.+)$', content, re.MULTILINE)
-    source_url = source_match.group(1).strip() if source_match else "https://rosstanko.com/"
+    source_url = source_match.group(1).strip() if source_match else "tdrusstankosbyt.ru"
     
     return {
         "sku": sku,

@@ -274,8 +274,8 @@ def check_website():
     print("="*80)
     
     sites = [
-        'https://rosstanko.com',
-        'https://russtanko-rzn.ru',
+        'tdrusstankosbyt.ru',
+        'https://tdrusstankosbyt.ru',
         'https://tdrusstankosbyt.ru'
     ]
     

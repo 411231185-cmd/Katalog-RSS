@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Скрипт для сбора описаний станков с сайта rosstanko.com
+Скрипт для сбора описаний станков с сайта tdrusstankosbyt.ru
 и создания структурированных файлов для GitHub репозитория
 """
 
@@ -33,7 +33,7 @@ STANKI = [
     {"sku": "UBB112", "name": "Фрезерный станок UBB-112", "search": "UBB-112"},
 ]
 
-BASE_URL = "https://rosstanko.com"
+BASE_URL = "tdrusstankosbyt.ru"
 
 def search_stanok_page(search_term):
     """Поиск страницы станка на сайте"""
@@ -172,7 +172,7 @@ def scrape_all_stanki():
             stanok_data = {
                 "sku": stanok['sku'],
                 "name": stanok['name'],
-                "purpose": f"Станок {stanok['name']} - информация уточняется на сайте rosstanko.com",
+                "purpose": f"Станок {stanok['name']} - информация уточняется на сайте tdrusstankosbyt.ru",
                 "characteristics": ["Характеристики уточняются"],
                 "equipment": ["Стандартная комплектация"],
                 "source_url": f"{BASE_URL}/"

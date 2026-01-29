@@ -16,9 +16,9 @@ output_file = r'C:\GitHub-Repositories\Katalog-RSS\catalogs\MASTER_WITH_HTML_LIN
 # Сайты конкурентов для парсинга
 COMPETITOR_URLS = [
     'https://stankoartel.com/catalog',
-    'https://www.russtanko-rzn.ru/tokarno-vintoreznye-stanki',
-    'https://www.russtanko-rzn.ru/revolvernye-golovki',
-    'https://www.russtanko-rzn.ru/shvp-shariko-vintovye-pary-peredachi',
+    'https://tdrusstankosbyt.ru/tokarno-vintoreznye-stanki',
+    'https://tdrusstankosbyt.ru/revolvernye-golovki',
+    'https://tdrusstankosbyt.ru/shvp-shariko-vintovye-pary-peredachi',
 ]
 
 # Бренды/производители для удаления

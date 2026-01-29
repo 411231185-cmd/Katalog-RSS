@@ -4,15 +4,15 @@ from bs4 import BeautifulSoup
 
 def check_rosstanko_com():
     print('=' * 80)
-    print('CHECKING: rosstanko.com')
+    print('CHECKING: tdrusstankosbyt.ru')
     print('=' * 80)
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     # Проверяем главную и каталог
     urls = [
-        'https://rosstanko.com',
-        'https://rosstanko.com/produkcziya'
+        'tdrusstankosbyt.ru',
+        'tdrusstankosbyt.ruprodukcziya'
     ]
     
     for url in urls:
@@ -54,12 +54,12 @@ def check_rosstanko_com():
 
 def check_russtanko_rzn():
     print('\n' + '=' * 80)
-    print('CHECKING: russtanko-rzn.ru')
+    print('CHECKING: tdrusstankosbyt.ru')
     print('=' * 80)
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    url = 'https://russtanko-rzn.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
+    url = 'https://tdrusstankosbyt.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nChecking: " + url)
     

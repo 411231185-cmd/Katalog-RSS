@@ -7,31 +7,31 @@ from urllib.parse import quote
 
 def search_on_rosstanko_com(product_title):
     if pd.isna(product_title): return None
-    print(f"  rosstanko.com: {str(product_title)[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://rosstanko.com/search?q={quote(str(product_title))}"
+        search_url = f"tdrusstankosbyt.rusearch?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'rosstanko.com', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 
 def search_on_russtanko_rzn(product_title):
     if pd.isna(product_title): return None
-    print(f"  russtanko-rzn.ru: {str(product_title)[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://russtanko-rzn.ru/search?q={quote(str(product_title))}"
+        search_url = f"https://tdrusstankosbyt.ru/search?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'russtanko-rzn.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 

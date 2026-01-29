@@ -41,7 +41,7 @@
         ...
       ],
       "equipment": ["Центры", "Патрон", ...],
-      "source_url": "https://rosstanko.com/..."
+      "source_url": "tdrusstankosbyt.ru..."
     }
   ]
 }
@@ -80,7 +80,7 @@ python update_descriptions_from_markdown.py
 
 ## Источники
 
-- Основной источник: https://rosstanko.com/
+- Основной источник: tdrusstankosbyt.ru
 - Дополнительная информация из каталога запчастей
 
 ## Примечания

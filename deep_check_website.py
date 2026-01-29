@@ -9,7 +9,7 @@ def analyze_page():
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    url = 'https://russtanko-rzn.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
+    url = 'https://tdrusstankosbyt.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nLoading: " + url)
     

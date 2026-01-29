@@ -2,7 +2,7 @@
 
 ## Описание
 
-Система для автоматического сбора и структурирования описаний станков с сайта rosstanko.com.
+Система для автоматического сбора и структурирования описаний станков с сайта tdrusstankosbyt.ru.
 
 ## Структура файлов
 
@@ -28,7 +28,7 @@ python scrape_stanok_descriptions.py
 ```
 
 Скрипт:
-- Ищет страницы станков на rosstanko.com
+- Ищет страницы станков на tdrusstankosbyt.ru
 - Извлекает назначение, характеристики, комплектацию
 - Создает Markdown, JSON и CSV файлы
 
@@ -64,7 +64,7 @@ python update_descriptions_from_markdown.py
 - Элемент 2
 - ...
 
-**Источник:** https://rosstanko.com/...
+**Источник:** tdrusstankosbyt.ru...
 ```
 
 ### JSON (descriptions.json)
@@ -78,7 +78,7 @@ python update_descriptions_from_markdown.py
       "purpose": "Предназначен для...",
       "characteristics": ["...", "..."],
       "equipment": ["...", "..."],
-      "source_url": "https://rosstanko.com/..."
+      "source_url": "tdrusstankosbyt.ru..."
     }
   ]
 }
@@ -179,6 +179,6 @@ cat descriptions/1M63.md
 
 ## Источники
 
-- Основной: https://rosstanko.com/
+- Основной: tdrusstankosbyt.ru
 - Техническая документация производителей
 - Каталог запчастей Katalog-RSS

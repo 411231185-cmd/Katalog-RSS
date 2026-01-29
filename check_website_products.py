@@ -9,7 +9,7 @@ def check_catalog():
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    base_url = 'https://russtanko-rzn.ru'
+    base_url = 'https://tdrusstankosbyt.ru'
     catalog_url = base_url + '/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nLoading: " + catalog_url)

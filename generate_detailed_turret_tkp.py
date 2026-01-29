@@ -124,14 +124,15 @@ def generate_turret_head_tkp(model_code, model_name, diameter_range, positions, 
 
 ## КОНТАКТНАЯ ИНФОРМАЦИЯ
 
-**ООО "РУССТАНКОСБЫТ"**
+Контактная информация
 
-📞 **Телефон:** +7 (495) 123-45-67  
-📧 **Email:** info@rosstanko.com  
-🌐 **Сайт:** www.rosstanko.com  
-📍 **Адрес:** г. Москва, ул. Производственная, д. 1
+📞 Телефон +7 499 390-85-04
 
-**Режим работы:** Пн-Пт 9:00–18:00 (МСК)
+📧 Email zakaz@tdrusstankosbyt.ru
+
+🌐 Сайт tdrusstankosbyt.ru
+
+📍 Адрес Москва Россия
 
 ---
 
@@ -221,14 +222,15 @@ def generate_component_tkp(component_code, component_name, description, applicat
 
 ## КОНТАКТНАЯ ИНФОРМАЦИЯ
 
-**ООО "РУССТАНКОСБЫТ"**
+Контактная информация
 
-📞 **Телефон:** +7 (495) 123-45-67  
-📧 **Email:** info@rosstanko.com  
-🌐 **Сайт:** www.rosstanko.com  
-📍 **Адрес:** г. Москва, ул. Производственная, д. 1
+📞 Телефон +7 499 390-85-04
 
-**Режим работы:** Пн-Пт 9:00–18:00 (МСК)
+📧 Email zakaz@tdrusstankosbyt.ru
+
+🌐 Сайт tdrusstankosbyt.ru
+
+📍 Адрес Москва Россия
 
 ---
 
@@ -648,14 +650,15 @@ service_categories = [
 
 ## КОНТАКТНАЯ ИНФОРМАЦИЯ
 
-**ООО "РУССТАНКОСБЫТ"**
+Контактная информация
 
-📞 **Телефон:** +7 (495) 123-45-67  
-📧 **Email:** info@rosstanko.com  
-🌐 **Сайт:** www.rosstanko.com  
-📍 **Адрес:** г. Москва, ул. Производственная, д. 1
+📞 Телефон +7 499 390-85-04
 
-**Режим работы:** Пн-Пт 9:00–18:00 (МСК)
+📧 Email zakaz@tdrusstankosbyt.ru
+
+🌐 Сайт tdrusstankosbyt.ru
+
+📍 Адрес Москва Россия
 
 ---
 
@@ -734,14 +737,15 @@ service_categories = [
 
 ## КОНТАКТНАЯ ИНФОРМАЦИЯ
 
-**ООО "РУССТАНКОСБЫТ"**
+Контактная информация
 
-📞 **Телефон:** +7 (495) 123-45-67  
-📧 **Email:** info@rosstanko.com  
-🌐 **Сайт:** www.rosstanko.com  
-📍 **Адрес:** г. Москва, ул. Производственная, д. 1
+📞 Телефон +7 499 390-85-04
 
-**Режим работы:** Пн-Пт 9:00–18:00 (МСК)
+📧 Email zakaz@tdrusstankosbyt.ru
+
+🌐 Сайт tdrusstankosbyt.ru
+
+📍 Адрес Москва Россия
 
 ---
 

@@ -391,9 +391,9 @@ import requests
 from bs4 import BeautifulSoup
 
 def analyze_rosstanko_com():
-    """Анализ структуры rosstanko.com"""
+    """Анализ структуры tdrusstankosbyt.ru"""
     print("=" * 80)
-    print("АНАЛИЗ: rosstanko.com")
+    print("АНАЛИЗ: tdrusstankosbyt.ru")
     print("=" * 80)
     
     headers = {
@@ -401,7 +401,7 @@ def analyze_rosstanko_com():
     }
     
     try:
-        url = "https://rosstanko.com"
+        url = "tdrusstankosbyt.ru"
         print(f"\nПроверка главной страницы: {url}")
         response = requests.get(url, headers=headers, timeout=15)
         print(f"Статус: {response.status_code}")
@@ -450,16 +450,16 @@ def analyze_rosstanko_com():
         print(f"❌ Ошибка: {e}")
 
 def analyze_russtanko_rzn():
-    """Анализ структуры russtanko-rzn.ru"""
+    """Анализ структуры tdrusstankosbyt.ru"""
     print("\n" + "=" * 80)
-    print("АНАЛИЗ: russtanko-rzn.ru")
+    print("АНАЛИЗ: tdrusstankosbyt.ru")
     print("=" * 80)
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
     
-    sites = ["https://russtanko-rzn.ru", "https://tdrusstankosbyt.ru"]
+    sites = ["https://tdrusstankosbyt.ru", "https://tdrusstankosbyt.ru"]
     
     for url in sites:
         try:
@@ -513,7 +513,7 @@ def get_example_product_page():
     print("""
 Чтобы найти правильные CSS-селекторы:
 
-1. Откройте rosstanko.com в браузере
+1. Откройте tdrusstankosbyt.ru в браузере
 2. Найдите ЛЮБОЙ товар (например, "вал шпиндельной бабки")
 3. Откройте страницу товара
 4. Нажмите F12 (откроется DevTools)
@@ -524,11 +524,11 @@ def get_example_product_page():
    - CSS-класс блока с полным описанием/ТКП
 
 Пример:
-  URL: https://rosstanko.com/product/val-shpindelnoy-babki
+  URL: tdrusstankosbyt.ruproduct/val-shpindelnoy-babki
   Краткое описание: <div class="product-short-desc">...</div>
   Полное описание: <div class="product-full-desc">...</div>
 
-То же самое для russtanko-rzn.ru или tdrusstankosbyt.ru
+То же самое для tdrusstankosbyt.ru или tdrusstankosbyt.ru
     """)
 
 def main():
@@ -609,15 +609,15 @@ from bs4 import BeautifulSoup
 
 def check_rosstanko_com():
     print('=' * 80)
-    print('CHECKING: rosstanko.com')
+    print('CHECKING: tdrusstankosbyt.ru')
     print('=' * 80)
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     # Проверяем главную и каталог
     urls = [
-        'https://rosstanko.com',
-        'https://rosstanko.com/produkcziya'
+        'tdrusstankosbyt.ru',
+        'tdrusstankosbyt.ruprodukcziya'
     ]
     
     for url in urls:
@@ -659,12 +659,12 @@ def check_rosstanko_com():
 
 def check_russtanko_rzn():
     print('\n' + '=' * 80)
-    print('CHECKING: russtanko-rzn.ru')
+    print('CHECKING: tdrusstankosbyt.ru')
     print('=' * 80)
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    url = 'https://russtanko-rzn.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
+    url = 'https://tdrusstankosbyt.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nChecking: " + url)
     
@@ -837,7 +837,7 @@ def check_catalog():
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    base_url = 'https://russtanko-rzn.ru'
+    base_url = 'https://tdrusstankosbyt.ru'
     catalog_url = base_url + '/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nLoading: " + catalog_url)
@@ -1227,8 +1227,8 @@ def check_website():
     print("="*80)
     
     sites = [
-        'https://rosstanko.com',
-        'https://russtanko-rzn.ru',
+        'tdrusstankosbyt.ru',
+        'https://tdrusstankosbyt.ru',
         'https://tdrusstankosbyt.ru'
     ]
     
@@ -1377,7 +1377,7 @@ def analyze_page():
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    url = 'https://russtanko-rzn.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
+    url = 'https://tdrusstankosbyt.ru/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
     
     print("\nLoading: " + url)
     
@@ -1459,9 +1459,9 @@ output_file = r'C:\GitHub-Repositories\Katalog-RSS\catalogs\MASTER_WITH_HTML_LIN
 # Сайты конкурентов для парсинга
 COMPETITOR_URLS = [
     'https://stankoartel.com/catalog',
-    'https://www.russtanko-rzn.ru/tokarno-vintoreznye-stanki',
-    'https://www.russtanko-rzn.ru/revolvernye-golovki',
-    'https://www.russtanko-rzn.ru/shvp-shariko-vintovye-pary-peredachi',
+    'https://tdrusstankosbyt.ru/tokarno-vintoreznye-stanki',
+    'https://tdrusstankosbyt.ru/revolvernye-golovki',
+    'https://tdrusstankosbyt.ru/shvp-shariko-vintovye-pary-peredachi',
 ]
 
 # Бренды/производители для удаления
@@ -2152,7 +2152,7 @@ def search_product_on_russtanko_rzn(product_title):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     try:
-        base_url = 'https://russtanko-rzn.ru'
+        base_url = 'https://tdrusstankosbyt.ru'
         catalog_url = base_url + '/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
         
         response = requests.get(catalog_url, headers=headers, timeout=15)
@@ -2260,7 +2260,7 @@ def main():
     print('=' * 80)
     print('RSS CATALOG PARSER')
     print('=' * 80)
-    print('\nFills Description and Text from russtanko-rzn.ru\n')
+    print('\nFills Description and Text from tdrusstankosbyt.ru\n')
     
     choice = input('Start? (y/n): ')
     
@@ -2503,30 +2503,30 @@ import time
 from urllib.parse import quote
 
 def search_on_rosstanko_com(product_title):
-    print(f"  rosstanko.com: {product_title[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {product_title[:50]}...")
     try:
-        search_url = f"https://rosstanko.com/search?q={quote(product_title)}"
+        search_url = f"tdrusstankosbyt.rusearch?q={quote(product_title)}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'rosstanko.com', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 
 def search_on_russtanko_rzn(product_title):
-    print(f"  russtanko-rzn.ru: {product_title[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {product_title[:50]}...")
     try:
-        search_url = f"https://russtanko-rzn.ru/search?q={quote(product_title)}"
+        search_url = f"https://tdrusstankosbyt.ru/search?q={quote(product_title)}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'russtanko-rzn.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 
@@ -2840,31 +2840,31 @@ from urllib.parse import quote
 
 def search_on_rosstanko_com(product_title):
     if pd.isna(product_title): return None
-    print(f"  rosstanko.com: {str(product_title)[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://rosstanko.com/search?q={quote(str(product_title))}"
+        search_url = f"tdrusstankosbyt.rusearch?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'rosstanko.com', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 
 def search_on_russtanko_rzn(product_title):
     if pd.isna(product_title): return None
-    print(f"  russtanko-rzn.ru: {str(product_title)[:50]}...")
+    print(f"  tdrusstankosbyt.ru: {str(product_title)[:50]}...")
     try:
-        search_url = f"https://russtanko-rzn.ru/search?q={quote(str(product_title))}"
+        search_url = f"https://tdrusstankosbyt.ru/search?q={quote(str(product_title))}"
         headers = {'User-Agent': 'Mozilla/5.0'}
         response = requests.get(search_url, headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             desc = soup.find('div', class_='product-description')
             txt = soup.find('div', class_='product-text')
-            return {'source': 'russtanko-rzn.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
+            return {'source': 'tdrusstankosbyt.ru', 'description': desc.get_text(strip=True) if desc else '', 'text': txt.get_text(strip=True) if txt else ''}
     except: pass
     return None
 

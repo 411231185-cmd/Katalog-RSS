@@ -118,12 +118,12 @@ def search_on_tdrusstankosbyt_priority(product_title):
 
 
 def search_on_rosstanko_com(product_title):
-    """Поиск на rosstanko.com"""
-    print("  [rosstanko.com] Поиск...")
+    """Поиск на tdrusstankosbyt.ru"""
+    print("  [tdrusstankosbyt.ru] Поиск...")
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     try:
-        base_url = 'https://rosstanko.com'
+        base_url = 'tdrusstankosbyt.ru'
         response = requests.get(base_url + '/produkcziya', headers=headers, timeout=15)
         
         if response.status_code == 200:
@@ -149,12 +149,12 @@ def search_on_rosstanko_com(product_title):
                             full_text = clean_text(div.get_text())
                             if len(full_text) > 100:
                                 short_desc = extract_short_description(full_text, 3)
-                                print(f"    ✅ Найдено на rosstanko.com")
+                                print(f"    ✅ Найдено на tdrusstankosbyt.ru")
                                 return {'description': short_desc[:400], 'text': full_text[:3000]}
                     
                     time.sleep(1)
     except Exception as e:
-        print(f"    ❌ Ошибка rosstanko.com: {str(e)[:50]}")
+        print(f"    ❌ Ошибка tdrusstankosbyt.ru: {str(e)[:50]}")
     
     return None
 
@@ -202,12 +202,12 @@ def search_on_tdrusstankosbyt(product_title):
 
 
 def search_on_russtanko_rzn(product_title):
-    """Поиск на russtanko-rzn.ru"""
-    print("  [russtanko-rzn.ru] Поиск...")
+    """Поиск на tdrusstankosbyt.ru"""
+    print("  [tdrusstankosbyt.ru] Поиск...")
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     try:
-        base_url = 'https://russtanko-rzn.ru'
+        base_url = 'https://tdrusstankosbyt.ru'
         catalog_url = base_url + '/katalogi-zapasnykh-chastey-i-osnastki-dlya-tokarnykh-stankov'
         
         response = requests.get(catalog_url, headers=headers, timeout=15)
@@ -259,7 +259,7 @@ def search_on_russtanko_rzn(product_title):
                                     }
     
     except Exception as e:
-        print("    ❌ Ошибка russtanko-rzn.ru: " + str(e)[:50])
+        print("    ❌ Ошибка tdrusstankosbyt.ru: " + str(e)[:50])
     
     return None
 
@@ -282,7 +282,7 @@ def search_product_on_all_sites(product_title):
     if result:
         return result
     
-    # 4️⃣ И последний rosstanko.com
+    # 4️⃣ И последний tdrusstankosbyt.ru
     result = search_on_rosstanko_com(product_title)
     if result:
         return result
@@ -299,9 +299,9 @@ def fill_descriptions(input_file=r'catalogs\MASTER_WITH_HTML_LINKS copy.csv',
     print('=' * 80)
     print('Сайты (по приоритету):')
     print('1. 🎯 tdrusstankosbyt.ru (ТВОЙ - максимальный приоритет!)')
-    print('2. russtanko-rzn.ru')
+    print('2. tdrusstankosbyt.ru')
     print('3. tdrusstankosbyt.ru (резерв)')
-    print('4. rosstanko.com')
+    print('4. tdrusstankosbyt.ru')
     print('=' * 80)
     print('📏 Description: до 400 символов (3 предложения)')
     print('📄 Text: до 3000 символов (расширенный)')
@@ -371,9 +371,9 @@ def main():
     print('4. Перелинковка 100% сохраняется!\n')
     print('Сайты:')
     print('1. 🎯 tdrusstankosbyt.ru (ПРИОРИТЕТ)')
-    print('2. russtanko-rzn.ru')
+    print('2. tdrusstankosbyt.ru')
     print('3. tdrusstankosbyt.ru (резерв)')
-    print('4. rosstanko.com\n')
+    print('4. tdrusstankosbyt.ru\n')
     
     choice = input('Начать парсинг? (y/n): ')
     

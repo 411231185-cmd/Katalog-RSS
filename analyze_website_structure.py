@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 
 def analyze_rosstanko_com():
-    """Анализ структуры rosstanko.com"""
+    """Анализ структуры tdrusstankosbyt.ru"""
     print("=" * 80)
-    print("АНАЛИЗ: rosstanko.com")
+    print("АНАЛИЗ: tdrusstankosbyt.ru")
     print("=" * 80)
     
     headers = {
@@ -12,7 +12,7 @@ def analyze_rosstanko_com():
     }
     
     try:
-        url = "https://rosstanko.com"
+        url = "tdrusstankosbyt.ru"
         print(f"\nПроверка главной страницы: {url}")
         response = requests.get(url, headers=headers, timeout=15)
         print(f"Статус: {response.status_code}")
@@ -61,16 +61,16 @@ def analyze_rosstanko_com():
         print(f"❌ Ошибка: {e}")
 
 def analyze_russtanko_rzn():
-    """Анализ структуры russtanko-rzn.ru"""
+    """Анализ структуры tdrusstankosbyt.ru"""
     print("\n" + "=" * 80)
-    print("АНАЛИЗ: russtanko-rzn.ru")
+    print("АНАЛИЗ: tdrusstankosbyt.ru")
     print("=" * 80)
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
     
-    sites = ["https://russtanko-rzn.ru", "https://tdrusstankosbyt.ru"]
+    sites = ["https://tdrusstankosbyt.ru", "https://tdrusstankosbyt.ru"]
     
     for url in sites:
         try:
@@ -124,7 +124,7 @@ def get_example_product_page():
     print("""
 Чтобы найти правильные CSS-селекторы:
 
-1. Откройте rosstanko.com в браузере
+1. Откройте tdrusstankosbyt.ru в браузере
 2. Найдите ЛЮБОЙ товар (например, "вал шпиндельной бабки")
 3. Откройте страницу товара
 4. Нажмите F12 (откроется DevTools)
@@ -135,11 +135,11 @@ def get_example_product_page():
    - CSS-класс блока с полным описанием/ТКП
 
 Пример:
-  URL: https://rosstanko.com/product/val-shpindelnoy-babki
+  URL: tdrusstankosbyt.ruproduct/val-shpindelnoy-babki
   Краткое описание: <div class="product-short-desc">...</div>
   Полное описание: <div class="product-full-desc">...</div>
 
-То же самое для russtanko-rzn.ru или tdrusstankosbyt.ru
+То же самое для tdrusstankosbyt.ru или tdrusstankosbyt.ru
     """)
 
 def main():
