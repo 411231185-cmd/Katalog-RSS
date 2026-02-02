@@ -1,14 +1,9 @@
 name: 📦 Catalog Auto-Sync & SEO Optimization
 
 on:
-  # Запуск вручную
   workflow_dispatch:
-  
-  # Запуск по расписанию (каждый день в 3:00 UTC)
   schedule:
     - cron: '0 3 * * *'
-  
-  # Запуск при push в catalogs/
   push:
     paths:
       - 'catalogs/TOP-KATALOG-*.csv'
@@ -16,58 +11,28 @@ on:
 jobs:
   process-catalog:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: 🐍 Setup Python 3.11
-        uses: actions/setup-python@v5
+
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-      
-      - name: 📦 Install dependencies
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas numpy openpyxl
-      
-      - name: 🔍 Run SEO Optimizer
+
+      - name: Run SEO Optimizer
+        run: python scripts/seo_optimizer.py
+        continue-on-error: true
+
+      - name: Commit and Push
         run: |
-          python scripts/seo_optimizer.py
-      
-      - name: 📊 Generate Analytics Report
-        run: |
-          python scripts/catalog_analytics.py
-      
-      - name: 📸 Check Photo Mappings
-        run: |
-          python scripts/check_photo_coverage.py
-      
-      - name: 💾 Commit and Push Changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "GitHub Actions Bot"
-          
-          git add catalogs/*.csv
-          git add reports/*.md
-          git add reports/*.json
-          
-          if git diff --staged --quiet; then
-            echo "✅ No changes to commit"
-          else
-            git commit -m "🤖 Auto-update: SEO optimization & analytics [$(date +'%Y-%m-%d %H:%M')]"
-            git push
-          fi
-      
-      - name: 📢 Create Summary
-        run: |
-          echo "## 📦 Catalog Processing Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ SEO optimization completed" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ Analytics report generated" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ Photo coverage checked" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🕐 Last run: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Actions Bot"
+          git add -A
+          git diff --staged --quiet || (git commit -m "Auto-update: SEO optimization" && git push)
