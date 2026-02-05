@@ -4,8 +4,8 @@
 🎯 ПАРСИНГ С САЙТОВ И СОЗДАНИЕ КАТАЛОГА ДЛЯ ОЛЕГА
 На основе final_parser_descriptions.py + формат OLEG-Shablon.xlsx
 
-Парсит сайты (по приоритету):
-1. tdrusstankosbyt.ru (ГЛАВНЫЙ - ваш сайт!)
+Парсит сайты :
+1. tdrusstankosbyt.ru 
 2. russtankosbyt.tilda.ws
 3. russtanko-rzn.ru
 4. rosstanko.com
