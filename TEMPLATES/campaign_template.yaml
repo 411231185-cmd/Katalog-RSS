@@ -1,0 +1,184 @@
+# Пример конфигурации рекламной кампании
+# Используйте этот шаблон для создания новых кампаний
+
+name: "Поиск - Основной продукт"
+type: "TEXT_AD"  # TEXT_AD, DYNAMIC_TEXT_AD, MOBILE_APP_AD
+status: "ACTIVE"  # DRAFT, ACTIVE, PAUSED
+
+# Настройки бюджета
+budget:
+  daily: 10000  # рублей
+  strategy: "MANUAL"  # MANUAL, AUTO, TARGET_CPA, TARGET_ROAS
+  target_cpa: 500  # если strategy = TARGET_CPA
+  target_roas: 200  # если strategy = TARGET_ROAS (%)
+
+# Регион показа
+geo:
+  - "Москва"
+  - "Санкт-Петербург"
+  # или ID: [1, 2] для Москвы и СПб
+
+# Временной таргетинг
+schedule:
+  timezone: "Europe/Moscow"
+  hours:
+    monday: "09:00-21:00"
+    tuesday: "09:00-21:00"
+    wednesday: "09:00-21:00"
+    thursday: "09:00-21:00"
+    friday: "09:00-21:00"
+    saturday: "10:00-20:00"
+    sunday: "10:00-20:00"
+
+# Корректировки ставок
+bid_modifiers:
+  mobile: 20  # +20% для мобильных устройств
+  desktop: 0   # базовая ставка
+  tablet: -20  # -20% для планшетов
+  
+  time_targeting:
+    "09-12": 15   # +15% утром
+    "12-18": 0    # базовая
+    "18-21": 10   # +10% вечером
+    "21-09": -30  # -30% ночью
+  
+  geo_targeting:
+    "Москва": 30      # +30%
+    "Санкт-Петербург": 20  # +20%
+
+# Настройки отслеживания
+tracking:
+  metrika_counter: "XXXXXX"
+  goals:
+    - goal_id: 111111
+      name: "Покупка"
+      value: 1000
+    - goal_id: 222222
+      name: "Заявка"
+      value: 500
+  
+  utm_template: "utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_content={ad_id}&utm_term={keyword}"
+
+# Группы объявлений
+ad_groups:
+  - name: "Купить - Основной продукт"
+    keywords:
+      - text: "купить основной продукт"
+        bid: 50000000  # в микроединицах (50 руб = 50000000)
+        match_type: "EXACT"  # EXACT, PHRASE, BROAD
+      
+      - text: "основной продукт цена"
+        bid: 45000000
+        match_type: "PHRASE"
+      
+      - text: "заказать основной продукт"
+        bid: 48000000
+        match_type: "EXACT"
+    
+    negative_keywords:
+      - "бесплатно"
+      - "скачать"
+      - "торрент"
+      - "своими руками"
+      - "б/у"
+    
+    ads:
+      - title1: "Основной продукт от 5000₽"
+        title2: "Скидка 20% при заказе сегодня"
+        text: "Качественный продукт. Доставка 1 день. Гарантия 2 года. 1000+ отзывов. Звоните!"
+        display_url: "site.ru/product"
+        url: "https://site.ru/product?{utm}"
+        
+      - title1: "Продукт под ключ - 5000₽"
+        title2: "Опыт 10 лет. Гарантия качества"
+        text: "Профессиональная установка. Бесплатная консультация. Договор. Рассрочка 0%."
+        display_url: "site.ru/product"
+        url: "https://site.ru/product?{utm}"
+    
+    extensions:
+      sitelinks:
+        - title: "Каталог"
+          url: "https://site.ru/catalog"
+        - title: "Отзывы"
+          url: "https://site.ru/reviews"
+        - title: "Доставка"
+          url: "https://site.ru/delivery"
+        - title: "Контакты"
+          url: "https://site.ru/contacts"
+      
+      callouts:
+        - "Доставка за 1 день"
+        - "Гарантия 2 года"
+        - "1000+ отзывов"
+        - "Рассрочка 0%"
+        - "Бесплатная консультация"
+      
+      structured_snippets:
+        header: "Преимущества"
+        values:
+          - "Качество"
+          - "Скорость"
+          - "Надежность"
+          - "Опыт"
+
+  - name: "Характеристики - Основной продукт"
+    keywords:
+      - text: "основной продукт премиум"
+        bid: 40000000
+        match_type: "PHRASE"
+      
+      - text: "основной продукт для дома"
+        bid: 42000000
+        match_type: "PHRASE"
+    
+    ads:
+      - title1: "Продукт премиум класса"
+        title2: "Лучшее качество и цена"
+        text: "Широкий выбор моделей. Профессиональная консультация. Доставка. Гарантия."
+        display_url: "site.ru/premium"
+        url: "https://site.ru/premium?{utm}"
+
+# Минус-слова на уровне кампании
+campaign_negative_keywords:
+  - "бесплатно"
+  - "скачать"
+  - "торрент"
+  - "бесплатный"
+  - "вакансия"
+  - "работа"
+  - "обучение"
+  - "курсы"
+  - "своими руками"
+  - "самостоятельно"
+  - "б/у"
+  - "бу"
+
+# Настройки уведомлений
+notifications:
+  email: "manager@company.com"
+  telegram: true
+  alerts:
+    - type: "budget_exceeded"
+      threshold: 120  # % от дневного бюджета
+    - type: "low_ctr"
+      threshold: 3    # CTR < 3%
+    - type: "high_cpc"
+      threshold: 100  # CPC > 100 руб
+    - type: "no_conversions"
+      period: 48      # часов без конверсий
+
+# Целевые показатели
+targets:
+  ctr: 5.0     # %
+  cpc: 50      # руб
+  cr: 2.0      # %
+  cpa: 500     # руб
+  roi: 200     # %
+  
+# Примечания и теги
+notes: "Основная кампания по продукту. Запущена 2026-01-13. Тестируем разные креативы."
+tags:
+  - "поиск"
+  - "основной-продукт"
+  - "москва"
+  - "высокий-приоритет"

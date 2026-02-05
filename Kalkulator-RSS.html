@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор деталей станков - ТД РУССтанкоСбыт</title>
+    <style>
+        :root {
+            --primary: #2196F3;
+            --primary-hover: #1976D2;
+            --success: #4CAF50;
+            --danger: #f44336;
+            --warning: #FF9800;
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --border: #dee2e6;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .header h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .calculator-panel {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            border-radius: 12px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            transition: width 0.4s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--bg-primary);
+        }
+
+        select:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.1);
+        }
+
+        select:disabled, input[type="number"]:disabled {
+            background: #e9ecef;
+            cursor: not-allowed;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary-hover);
+            transform: scale(1.05);
+        }
+
+        .quantity-btn:active {
+            transform: scale(0.95);
+        }
+
+        .part-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .part-card.visible {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .part-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .part-info {
+            display: grid;
+            gap: 10px;
+        }
+
+        .part-info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .part-info-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .part-info-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .price-display {
+            background: linear-gradient(135deg, var(--success) 0%, #66BB6A 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .price-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .btn-add-to-cart {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--success) 0%, #66BB6A 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .btn-add-to-cart.visible {
+            display: block;
+        }
+
+        .btn-add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-add-to-cart:active {
+            transform: translateY(0);
+        }
+
+        .cart-panel {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 20px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cart-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+        }
+
+        .cart-badge {
+            background: var(--danger);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            background: var(--bg-primary);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            animation: slideIn 0.3s ease;
+        }
+
+        .cart-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .cart-item-remove {
+            background: var(--danger);
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .cart-item-remove:hover {
+            background: #d32f2f;
+            transform: scale(1.1);
+        }
+
+        .cart-item-details {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cart-qty-btn {
+            width: 28px;
+            height: 28px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .cart-qty-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .cart-item-price {
+            font-weight: 700;
+            color: var(--success);
+            font-size: 1rem;
+        }
+
+        .cart-total {
+            background: linear-gradient(135deg, var(--primary) 0%, #1976D2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-total-row:last-child {
+            margin-bottom: 0;
+            padding-top: 15px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .btn-clear-cart, .btn-order {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn-clear-cart {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-clear-cart:hover {
+            background: #d32f2f;
+            transform: translateY(-2px);
+        }
+
+        .btn-order {
+            background: linear-gradient(135deg, var(--success) 0%, #66BB6A 100%);
+            color: white;
+        }
+
+        .btn-order:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-cart-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .order-form {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            margin-top: 30px;
+            display: none;
+        }
+
+        .order-form.visible {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .order-form h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--bg-primary);
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-submit-order {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1976D2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit-order:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-panel {
+                position: static;
+                max-height: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .breadcrumbs {
+                font-size: 0.8rem;
+            }
+
+            .price-value {
+                font-size: 1.5rem;
+            }
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .badge-chpu {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .badge-tokarnye {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+
+        .badge-jd {
+            background: #E8F5E9;
+            color: #388E3C;
+        }
+
+        .badge-trubonareznoye {
+            background: #F3E5F5;
+            color: #7B1FA2;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--success);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            animation: slideInRight 0.4s ease;
+            display: none;
+        }
+
+        .notification.visible {
+            display: block;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 Калькулятор деталей станков</h1>
+            <p>ТД РУССтанкоСбыт - Точный расчёт комплектующих для токарных станков</p>
+        </div>
+
+        <div class="main-content">
+            <div class="calculator-panel">
+                <!-- Хлебные крошки -->
+                <div class="breadcrumbs">
+                    <div class="breadcrumb-item" id="breadcrumb-machine">
+                        <span>Выберите станок</span>
+                    </div>
+                    <span class="breadcrumb-separator" style="display:none;">→</span>
+                    <div class="breadcrumb-item" id="breadcrumb-unit" style="display:none;">
+                        <span>Узел</span>
+                    </div>
+                    <span class="breadcrumb-separator" style="display:none;">→</span>
+                    <div class="breadcrumb-item" id="breadcrumb-part" style="display:none;">
+                        <span>Деталь</span>
+                    </div>
+                </div>
+
+                <!-- Прогресс бар -->
+                <div class="progress-text">Шаг <span id="step-current">1</span> из 3</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 33%"></div>
+                </div>
+
+                <!-- Форма выбора -->
+                <div class="form-group">
+                    <label for="machineModel">🔧 Шаг 1: Выберите модель станка</label>
+                    <select id="machineModel">
+                        <option value="">-- Выберите модель станка --</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="group-unit" style="display:none;">
+                    <label for="machineUnit">⚙️ Шаг 2: Выберите узел станка</label>
+                    <select id="machineUnit" disabled>
+                        <option value="">-- Выберите узел станка --</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="group-part" style="display:none;">
+                    <label for="partType">🔩 Шаг 3: Выберите комплектующую</label>
+                    <select id="partType" disabled>
+                        <option value="">-- Выберите комплектующую --</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="group-quantity" style="display:none;">
+                    <label for="quantity">📦 Количество</label>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="999">
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+
+                <!-- Карточка детали -->
+                <div class="part-card" id="part-card">
+                    <h3 id="part-card-name">Название детали</h3>
+                    <div class="part-info" id="part-info"></div>
+                    <div class="price-display">
+                        <div class="price-label">Стоимость за <span id="price-unit">шт</span>:</div>
+                        <div class="price-value"><span id="price-single">0</span> ₽</div>
+                    </div>
+                </div>
+
+                <button class="btn-add-to-cart" id="btn-add-to-cart" onclick="addToCart()">
+                    ➕ Добавить в корзину
+                </button>
+            </div>
+
+            <!-- Корзина -->
+            <div class="cart-panel">
+                <div class="cart-header">
+                    <h2>🛒 Корзина <span class="cart-badge" id="cart-badge">0</span></h2>
+                </div>
+
+                <div id="cart-empty" class="empty-cart">
+                    <div class="empty-cart-icon">🛒</div>
+                    <p>Корзина пуста</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Выберите детали для заказа</p>
+                </div>
+
+                <div id="cart-content" style="display:none;">
+                    <div class="cart-items" id="cart-items"></div>
+                    
+                    <div class="cart-total">
+                        <div class="cart-total-row">
+                            <span>Позиций:</span>
+                            <span id="total-items">0</span>
+                        </div>
+                        <div class="cart-total-row">
+                            <span>Количество:</span>
+                            <span id="total-quantity">0</span>
+                        </div>
+                        <div class="cart-total-row">
+                            <span>Итого:</span>
+                            <span id="total-price">0 ₽</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-order" onclick="showOrderForm()">
+                        📋 Оформить заказ
+                    </button>
+                    <button class="btn-clear-cart" onclick="clearCart()">
+                        🗑️ Очистить корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма заказа -->
+        <div class="order-form" id="order-form">
+            <h2>📋 Оформление заказа</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="customer-name">Ваше имя *</label>
+                    <input type="text" id="customer-name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Телефон *</label>
+                    <input type="tel" id="customer-phone" required placeholder="+7 (999) 123-45-67">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="customer-email">Email *</label>
+                    <input type="email" id="customer-email" required placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="customer-company">Компания</label>
+                    <input type="text" id="customer-company" placeholder="ООО &quot;Пример&quot;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="customer-comment">Комментарий к заказу</label>
+                <textarea id="customer-comment" placeholder="Укажите дополнительные пожелания..."></textarea>
+            </div>
+
+            <button class="btn-submit-order" onclick="submitOrder()">
+                ✅ Отправить заказ
+            </button>
+
+            <div class="contact-info">
+                <h3>📞 Контактная информация</h3>
+                <div class="contact-item">☎️ Телефон: +7 499 390-85-04</div>
+                <div class="contact-item">📧 Email: zakaz@tdrusstankosbyt.ru</div>
+                <div class="contact-item">💬 Telegram: @tdrusstankosbyt</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // ============================================
+        // БАЗА ДАННЫХ СТАНКОВ, УЗЛОВ И КОМПЛЕКТУЮЩИХ
+        // ============================================
+        
+        const machineData = {
+            "16k20": {
+                name: "16К20 - Токарно-винторезный",
+                category: "tokarnye",
+                units: {
+                    "feedbox": {
+                        name: "Коробка подач",
+                        parts: {
+                            "gear_z42_m3": {
+                                name: "Шестерня Z=42, модуль 3",
+                                price: 2500,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 3, Зубья: 42",
+                                article: "16К20.070.153"
+                            },
+                            "gear_z60_m3": {
+                                name: "Шестерня Z=60, модуль 3",
+                                price: 3200,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 3, Зубья: 60",
+                                article: "16К20.070.154"
+                            },
+                            "shaft_intermediate": {
+                                name: "Вал промежуточный Ø40х250мм",
+                                price: 4500,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 45, Диаметр: 40мм, Длина: 250мм",
+                                article: "16К20.070.402"
+                            },
+                            "bearing_205": {
+                                name: "Подшипник 205",
+                                price: 850,
+                                unit: "шт",
+                                characteristics: "Тип: Радиальный шариковый, Диаметр: 25мм",
+                                article: "ГОСТ 8338-75"
+                            },
+                            "gear_z35_m2_5": {
+                                name: "Шестерня Z=35, модуль 2.5",
+                                price: 2100,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 2.5, Зубья: 35",
+                                article: "16К20.070.155"
+                            }
+                        }
+                    },
+                    "spindle": {
+                        name: "Шпиндельная бабка",
+                        parts: {
+                            "spindle_main": {
+                                name: "Шпиндель основной Ø105мм",
+                                price: 15000,
+                                unit: "шт",
+                                characteristics: "Конус: Морзе 6, Диаметр: 105мм, Материал: Сталь 45",
+                                article: "16К20.020.401"
+                            },
+                            "spindle_nut": {
+                                name: "Гайка шпиндельная",
+                                price: 3500,
+                                unit: "шт",
+                                characteristics: "Резьба: М105х2, Материал: Сталь 40Х",
+                                article: "16К20.020.485"
+                            },
+                            "gear_block_z60_40": {
+                                name: "Блок-шестерня Z=60/40",
+                                price: 6800,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 4, Зубья: 60/40",
+                                article: "16К20.020.535"
+                            },
+                            "bearing_46216": {
+                                name: "Подшипник 46216 (шпиндельный)",
+                                price: 4200,
+                                unit: "шт",
+                                characteristics: "Тип: Радиально-упорный, Диаметр: 80мм",
+                                article: "ГОСТ 831-75"
+                            },
+                            "friction_disc_set": {
+                                name: "Комплект дисков фрикционных",
+                                price: 4200,
+                                unit: "комплект",
+                                characteristics: "В комплекте: 8 дисков (4 ведущих + 4 ведомых)",
+                                article: "16К20.020.486/487"
+                            }
+                        }
+                    },
+                    "tailstock": {
+                        name: "Задняя бабка",
+                        parts: {
+                            "center_rotating": {
+                                name: "Центр вращающийся Морзе 4",
+                                price: 2800,
+                                unit: "шт",
+                                characteristics: "Конус: Морзе 4, Угол: 60°, Материал: Сталь У8",
+                                article: "ГОСТ 8742-75"
+                            },
+                            "quill": {
+                                name: "Пиноль Ø80мм",
+                                price: 8000,
+                                unit: "шт",
+                                characteristics: "Диаметр: 80мм, Ход: 150мм, Материал: Сталь 45",
+                                article: "16К20.030.401"
+                            },
+                            "tailstock_body": {
+                                name: "Корпус задней бабки",
+                                price: 12000,
+                                unit: "шт",
+                                characteristics: "Материал: Чугун СЧ20, Вес: 45кг",
+                                article: "16К20.030.001"
+                            },
+                            "screw_quill": {
+                                name: "Винт пиноли М20х2",
+                                price: 1200,
+                                unit: "шт",
+                                characteristics: "Резьба: М20х2, Длина: 180мм, Материал: Сталь 45",
+                                article: "16К20.030.420"
+                            }
+                        }
+                    },
+                    "apron": {
+                        name: "Фартук",
+                        parts: {
+                            "half_nut": {
+                                name: "Гайка маточная (полугайка)",
+                                price: 4500,
+                                unit: "шт",
+                                characteristics: "Материал: Бронза БрАЖ9-4, Резьба: Трапеция 28х5",
+                                article: "16К20.061.202"
+                            },
+                            "gear_shaft": {
+                                name: "Вал-шестерня Z=28",
+                                price: 3800,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 2, Зубья: 28",
+                                article: "16К20.061.597"
+                            },
+                            "clutch_overrunning": {
+                                name: "Муфта обгонная",
+                                price: 5200,
+                                unit: "шт",
+                                characteristics: "Тип: Роликовая, Диаметр: 60мм",
+                                article: "16К20.061.550"
+                            },
+                            "rack_350mm": {
+                                name: "Рейка 350мм",
+                                price: 2800,
+                                unit: "шт",
+                                characteristics: "Длина: 350мм, Модуль: 3, Материал: Сталь 45",
+                                article: "16К20.011.432"
+                            }
+                        }
+                    },
+                    "carriage": {
+                        name: "Каретка и суппорт",
+                        parts: {
+                            "cross_slide_screw": {
+                                name: "Винт поперечной подачи с гайкой",
+                                price: 9500,
+                                unit: "комплект",
+                                characteristics: "Резьба: Трапеция 24х5, Длина: 380мм",
+                                article: "16К20.041.402"
+                            },
+                            "tool_post": {
+                                name: "Резцедержатель 4-позиционный",
+                                price: 16000,
+                                unit: "шт",
+                                characteristics: "Позиций: 4, Размер резца: 25мм, Вес: 12кг",
+                                article: "16К20.041.001"
+                            },
+                            "top_slide": {
+                                name: "Верхняя часть суппорта",
+                                price: 12000,
+                                unit: "шт",
+                                characteristics: "Материал: Чугун СЧ20, Вес: 28кг",
+                                article: "16К20.041.011"
+                            },
+                            "middle_slide": {
+                                name: "Средняя часть суппорта",
+                                price: 14000,
+                                unit: "шт",
+                                characteristics: "Материал: Чугун СЧ20, Вес: 35кг",
+                                article: "16К20.041.012"
+                            },
+                            "lead_screw_1000": {
+                                name: "Винт ходовой РМЦ-1000",
+                                price: 18000,
+                                unit: "шт",
+                                characteristics: "Резьба: Трапеция 28х5, Длина: 1000мм",
+                                article: "16К20.011.403"
+                            }
+                        }
+                    }
+                }
+            },
+            "16a20f3": {
+                name: "16А20Ф3 - Токарный с ЧПУ",
+                category: "chpu",
+                units: {
+                    "spindle": {
+                        name: "Шпиндельная бабка",
+                        parts: {
+                            "spindle_cnc": {
+                                name: "Шпиндель с ЧПУ Ø55мм",
+                                price: 28000,
+                                unit: "шт",
+                                characteristics: "Конус: Морзе 5, Диаметр: 55мм, Частота: до 2500 об/мин",
+                                article: "16А20Ф3.020.401"
+                            },
+                            "encoder": {
+                                name: "Энкодер шпинделя",
+                                price: 12500,
+                                unit: "шт",
+                                characteristics: "Разрешение: 1024 имп/об, Тип: Инкрементный",
+                                article: "16А20Ф3.020.850"
+                            },
+                            "bearing_cnc": {
+                                name: "Подшипник шпиндельный прецизионный",
+                                price: 8500,
+                                unit: "шт",
+                                characteristics: "Класс точности: P4, Тип: 7216, Диаметр: 80мм",
+                                article: "ГОСТ 831-75"
+                            }
+                        }
+                    },
+                    "turret": {
+                        name: "Револьверная головка",
+                        parts: {
+                            "turret_8pos": {
+                                name: "Револьверная головка 8-позиционная",
+                                price: 85000,
+                                unit: "шт",
+                                characteristics: "Позиций: 8, Повторяемость: 0.003мм, Вес: 55кг",
+                                article: "16А20Ф3.040.000"
+                            },
+                            "tool_block": {
+                                name: "Блок инструментальный быстросъемный",
+                                price: 4500,
+                                unit: "шт",
+                                characteristics: "Размер резца: 25х25мм, Тип: Быстросъемный",
+                                article: "16А20Ф3.040.120"
+                            },
+                            "turret_motor": {
+                                name: "Двигатель поворота револьверной головки",
+                                price: 18000,
+                                unit: "шт",
+                                characteristics: "Мощность: 0.75кВт, Тип: Серводвигатель",
+                                article: "16А20Ф3.040.850"
+                            }
+                        }
+                    },
+                    "ballscrew": {
+                        name: "Шарико-винтовые пары (ШВП)",
+                        parts: {
+                            "ballscrew_z": {
+                                name: "ШВП продольной подачи (Z)",
+                                price: 32000,
+                                unit: "шт",
+                                characteristics: "Шаг: 10мм, Диаметр: 40мм, Длина: 1200мм",
+                                article: "16А20Ф3.050.401"
+                            },
+                            "ballscrew_x": {
+                                name: "ШВП поперечной подачи (X)",
+                                price: 24000,
+                                unit: "шт",
+                                characteristics: "Шаг: 10мм, Диаметр: 32мм, Длина: 600мм",
+                                article: "16А20Ф3.041.401"
+                            },
+                            "ballscrew_support": {
+                                name: "Опора ШВП концевая",
+                                price: 3500,
+                                unit: "шт",
+                                characteristics: "Тип: Фиксированная, Диаметр: 40мм",
+                                article: "16А20Ф3.050.420"
+                            }
+                        }
+                    },
+                    "servo": {
+                        name: "Серводвигатели и приводы",
+                        parts: {
+                            "servo_main": {
+                                name: "Серводвигатель главного движения 11кВт",
+                                price: 95000,
+                                unit: "шт",
+                                characteristics: "Мощность: 11кВт, Момент: 800Нм, Частота: 2500 об/мин",
+                                article: "16А20Ф3.020.900"
+                            },
+                            "servo_z": {
+                                name: "Серводвигатель подачи Z",
+                                price: 45000,
+                                unit: "шт",
+                                characteristics: "Мощность: 2кВт, Момент: 15Нм",
+                                article: "16А20Ф3.050.900"
+                            },
+                            "servo_x": {
+                                name: "Серводвигатель подачи X",
+                                price: 42000,
+                                unit: "шт",
+                                characteristics: "Мощность: 1.5кВт, Момент: 12Нм",
+                                article: "16А20Ф3.041.900"
+                            }
+                        }
+                    }
+                }
+            },
+            "rt817": {
+                name: "РТ817 - ЖД токарный",
+                category: "jd",
+                units: {
+                    "spindle": {
+                        name: "Шпиндельная бабка усиленная",
+                        parts: {
+                            "spindle_heavy": {
+                                name: "Шпиндель усиленный Ø128мм",
+                                price: 45000,
+                                unit: "шт",
+                                characteristics: "Диаметр: 128мм, Конус: Морзе 115, Мощность: 30кВт",
+                                article: "РТ817.020.401"
+                            },
+                            "bearing_heavy": {
+                                name: "Подшипник шпиндельный усиленный",
+                                price: 12500,
+                                unit: "шт",
+                                characteristics: "Тип: Радиально-упорный, Диаметр: 120мм",
+                                article: "РТ817.020.450"
+                            },
+                            "gear_heavy_z80": {
+                                name: "Шестерня усиленная Z=80, модуль 5",
+                                price: 8500,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40ХН, Модуль: 5, Зубья: 80",
+                                article: "РТ817.020.555"
+                            }
+                        }
+                    },
+                    "feedbox_heavy": {
+                        name: "Коробка подач усиленная",
+                        parts: {
+                            "gear_heavy_z55": {
+                                name: "Шестерня усиленная Z=55, модуль 4",
+                                price: 6800,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40ХН, Модуль: 4, Зубья: 55",
+                                article: "РТ817.070.153"
+                            },
+                            "shaft_heavy": {
+                                name: "Вал промежуточный усиленный Ø60мм",
+                                price: 12000,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 45, Диаметр: 60мм, Длина: 450мм",
+                                article: "РТ817.070.402"
+                            },
+                            "clutch_electromagnetic": {
+                                name: "Муфта электромагнитная",
+                                price: 18500,
+                                unit: "шт",
+                                characteristics: "Момент: 250Нм, Напряжение: 24В",
+                                article: "РТ817.070.650"
+                            }
+                        }
+                    },
+                    "carriage_heavy": {
+                        name: "Каретка усиленная",
+                        parts: {
+                            "guide_rail": {
+                                name: "Направляющая планка закаленная",
+                                price: 8500,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 45, Закалка: HRC 55-60, Длина: 800мм",
+                                article: "РТ817.050.432"
+                            },
+                            "tool_post_heavy": {
+                                name: "Резцедержатель усиленный 4-позиционный",
+                                price: 28000,
+                                unit: "шт",
+                                characteristics: "Позиций: 4, Размер резца: 40мм, Вес: 35кг",
+                                article: "РТ817.041.001"
+                            }
+                        }
+                    }
+                }
+            },
+            "rt117": {
+                name: "РТ117 - ЖД токарный легкий",
+                category: "jd",
+                units: {
+                    "spindle": {
+                        name: "Шпиндельная бабка",
+                        parts: {
+                            "spindle_rt117": {
+                                name: "Шпиндель Ø128мм",
+                                price: 38000,
+                                unit: "шт",
+                                characteristics: "Диаметр: 128мм, Конус: Морзе 115, Мощность: 22кВт",
+                                article: "РТ117.020.401"
+                            },
+                            "gear_rt117_z65": {
+                                name: "Шестерня Z=65, модуль 4",
+                                price: 6200,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 4, Зубья: 65",
+                                article: "РТ117.020.535"
+                            }
+                        }
+                    },
+                    "steadyrest": {
+                        name: "Люнеты",
+                        parts: {
+                            "steadyrest_fixed": {
+                                name: "Люнет неподвижный Ø70-380мм",
+                                price: 15000,
+                                unit: "шт",
+                                characteristics: "Диапазон: Ø70-380мм, Тип: Закрытый",
+                                article: "РТ117.080.001"
+                            },
+                            "steadyrest_mobile": {
+                                name: "Люнет подвижный Ø70-250мм",
+                                price: 12000,
+                                unit: "шт",
+                                characteristics: "Диапазон: Ø70-250мм, Тип: Открытый",
+                                article: "РТ117.080.002"
+                            }
+                        }
+                    }
+                }
+            },
+            "1m63n": {
+                name: "1М63Н - Токарно-винторезный",
+                category: "tokarnye",
+                units: {
+                    "spindle": {
+                        name: "Шпиндельная бабка",
+                        parts: {
+                            "spindle_1m63": {
+                                name: "Шпиндель Ø105мм",
+                                price: 18500,
+                                unit: "шт",
+                                characteristics: "Диаметр: 105мм, Конус: 11М, Частота: 10-1250 об/мин",
+                                article: "1М63.020.401"
+                            },
+                            "gear_1m63_z48": {
+                                name: "Шестерня Z=48, модуль 3.5",
+                                price: 3800,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 3.5, Зубья: 48",
+                                article: "1М63.020.535"
+                            },
+                            "friction_shaft": {
+                                name: "Вал фрикционный в сборе",
+                                price: 22000,
+                                unit: "шт",
+                                characteristics: "В комплекте: вал + диски фрикционные",
+                                article: "1М63.020.402"
+                            }
+                        }
+                    },
+                    "feedbox": {
+                        name: "Коробка подач",
+                        parts: {
+                            "gear_1m63_z36": {
+                                name: "Колесо зубчатое Z=36, модуль 3",
+                                price: 2800,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 3, Зубья: 36",
+                                article: "1М63.070.151"
+                            },
+                            "gear_1m63_z42": {
+                                name: "Колесо зубчатое Z=42, модуль 3",
+                                price: 3100,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 40Х, Модуль: 3, Зубья: 42",
+                                article: "1М63.070.152"
+                            },
+                            "shaft_1m63": {
+                                name: "Вал I (1-ой оси)",
+                                price: 8500,
+                                unit: "шт",
+                                characteristics: "Материал: Сталь 45, Диаметр: 45мм",
+                                article: "1М63.070.199"
+                            }
+                        }
+                    },
+                    "carriage": {
+                        name: "Каретка и суппорт",
+                        parts: {
+                            "chuck_400": {
+                                name: "Патрон 3-кулачковый Ø400мм",
+                                price: 35000,
+                                unit: "шт",
+                                characteristics: "Диаметр: 400мм, Кулачков: 3, Тип: Самоцентрирующий",
+                                article: "ГОСТ 2675-80"
+                            },
+                            "tool_post_1m63": {
+                                name: "Резцедержатель 4-позиционный",
+                                price: 18500,
+                                unit: "шт",
+                                characteristics: "Позиций: 4, Размер резца: 32мм",
+                                article: "1М63.041.001"
+                            }
+                        }
+                    }
+                }
+            },
+            "rt755f3": {
+                name: "РТ755Ф3 - Токарный с ЧПУ",
+                category: "chpu",
+                units: {
+                    "turret": {
+                        name: "Револьверная головка",
+                        parts: {
+                            "turret_8pos_755": {
+                                name: "Револьверная головка 8-позиционная",
+                                price: 92000,
+                                unit: "шт",
+                                characteristics: "Позиций: 8, Поворот: горизонтальная ось, Вес: 60кг",
+                                article: "РТ755Ф3.040.000"
+                            },
+                            "turret_indexing": {
+                                name: "Механизм индексации револьверной головки",
+                                price: 28000,
+                                unit: "шт",
+                                characteristics: "Точность: ±0.001мм, Время поворота: 0.8-1.2сек",
+                                article: "РТ755Ф3.040.120"
+                            }
+                        }
+                    },
+                    "electronics": {
+                        name: "Электрооборудование",
+                        parts: {
+                            "cnc_nc210": {
+                                name: "Система ЧПУ NC-210",
+                                price: 185000,
+                                unit: "комплект",
+                                characteristics: "Производитель: Балт-Систем, Осей: 2, Память: 512Мб",
+                                article: "NC-210"
+                            },
+                            "servo_drive": {
+                                name: "Сервоусилитель 2-координатный",
+                                price: 75000,
+                                unit: "шт",
+                                characteristics: "Мощность: 3кВт, Каналов: 2",
+                                article: "РТ755Ф3.900.120"
+                            }
+                        }
+                    }
+                }
+            },
+            "rt305m": {
+                name: "РТ305М - Трубонарезной",
+                category: "trubonareznoye",
+                units: {
+                    "threading_head": {
+                        name: "Резьбонарезная головка",
+                        parts: {
+                            "thread_head_auto": {
+                                name: "Головка резьбонарезная автоматическая",
+                                price: 45000,
+                                unit: "шт",
+                                characteristics: "Диапазон резьбы: 1/2&quot; - 6&quot;, Стандарт: API",
+                                article: "РТ305М.120.001"
+                            },
+                            "comb_set": {
+                                name: "Комплект гребенок для резьбы 2&quot;",
+                                price: 12500,
+                                unit: "комплект",
+                                characteristics: "Размер: 2&quot;, Профиль: API, Материал: Р6М5",
+                                article: "РТ305М.120.150"
+                            },
+                            "comb_set_4": {
+                                name: "Комплект гребенок для резьбы 4&quot;",
+                                price: 18000,
+                                unit: "комплект",
+                                characteristics: "Размер: 4&quot;, Профиль: API, Материал: Р6М5",
+                                article: "РТ305М.120.155"
+                            }
+                        }
+                    },
+                    "chuck_pipe": {
+                        name: "Патроны для труб",
+                        parts: {
+                            "chuck_4jaw_720": {
+                                name: "Патрон 4-кулачковый Ø720мм",
+                                price: 95000,
+                                unit: "шт",
+                                characteristics: "Диаметр: 720мм, Кулачков: 4, Тип: Механизированный",
+                                article: "РТ305М.030.001"
+                            },
+                            "jaw_set": {
+                                name: "Комплект кулачков для патрона Ø720мм",
+                                price: 18500,
+                                unit: "комплект",
+                                characteristics: "Кулачков: 4шт, Диапазон зажима: 50-650мм",
+                                article: "РТ305М.030.120"
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        // ============================================
+        // ПЕРЕМЕННЫЕ СОСТОЯНИЯ
+        // ============================================
+        
+        let currentMachine = null;
+        let currentUnit = null;
+        let currentPart = null;
+        let cart = JSON.parse(localStorage.getItem('tdrusstankosbyt_cart')) || [];
+
+        // ============================================
+        // ИНИЦИАЛИЗАЦИЯ
+        // ============================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMachines();
+            updateCart();
+            
+            // Обработчики событий
+            document.getElementById('machineModel').addEventListener('change', onMachineChange);
+            document.getElementById('machineUnit').addEventListener('change', onUnitChange);
+            document.getElementById('partType').addEventListener('change', onPartChange);
+            document.getElementById('quantity').addEventListener('input', onQuantityChange);
+        });
+
+        // ============================================
+        // ЗАГРУЗКА СПИСКОВ
+        // ============================================
+        
+        function loadMachines() {
+            const select = document.getElementById('machineModel');
+            
+            for (const [key, machine] of Object.entries(machineData)) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = machine.name;
+                
+                // Добавляем бейдж категории
+                const badge = getCategoryBadge(machine.category);
+                option.textContent += ' ' + badge;
+                
+                select.appendChild(option);
+            }
+        }
+
+        function getCategoryBadge(category) {
+            const badges = {
+                'chpu': '🤖ЧПУ',
+                'tokarnye': '🔧Токарные',
+                'jd': '🚂ЖД',
+                'trubonareznoye': '🔩Трубонарезные'
+            };
+            return badges[category] || '';
+        }
+
+        function onMachineChange(e) {
+            const machineKey = e.target.value;
+            
+            if (!machineKey) {
+                resetForm();
+                return;
+            }
+            
+            currentMachine = machineKey;
+            const machine = machineData[machineKey];
+            
+            // Обновляем breadcrumbs
+            document.getElementById('breadcrumb-machine').innerHTML = `<span class="active">${machine.name}</span>`;
+            document.querySelectorAll('.breadcrumb-separator')[0].style.display = 'inline';
+            
+            // Загружаем узлы
+            const unitSelect = document.getElementById('machineUnit');
+            unitSelect.innerHTML = '<option value="">-- Выберите узел станка --</option>';
+            
+            for (const [key, unit] of Object.entries(machine.units)) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = unit.name;
+                unitSelect.appendChild(option);
+            }
+            
+            unitSelect.disabled = false;
+            document.getElementById('group-unit').style.display = 'block';
+            
+            // Сброс следующих уровней
+            resetUnit();
+            
+            updateProgress(1);
+        }
+
+        function onUnitChange(e) {
+            const unitKey = e.target.value;
+            
+            if (!unitKey) {
+                resetUnit();
+                return;
+            }
+            
+            currentUnit = unitKey;
+            const machine = machineData[currentMachine];
+            const unit = machine.units[unitKey];
+            
+            // Обновляем breadcrumbs
+            document.getElementById('breadcrumb-unit').innerHTML = `<span class="active">${unit.name}</span>`;
+            document.getElementById('breadcrumb-unit').style.display = 'inline';
+            document.querySelectorAll('.breadcrumb-separator')[1].style.display = 'inline';
+            
+            // Загружаем детали
+            const partSelect = document.getElementById('partType');
+            partSelect.innerHTML = '<option value="">-- Выберите комплектующую --</option>';
+            
+            for (const [key, part] of Object.entries(unit.parts)) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = part.name + ' - ' + part.price.toLocaleString('ru-RU') + ' ₽';
+                partSelect.appendChild(option);
+            }
+            
+            partSelect.disabled = false;
+            document.getElementById('group-part').style.display = 'block';
+            
+            // Сброс детали
+            resetPart();
+            
+            updateProgress(2);
+        }
+
+        function onPartChange(e) {
+            const partKey = e.target.value;
+            
+            if (!partKey) {
+                resetPart();
+                return;
+            }
+            
+            currentPart = partKey;
+            const machine = machineData[currentMachine];
+            const unit = machine.units[currentUnit];
+            const part = unit.parts[partKey];
+            
+            // Обновляем breadcrumbs
+            document.getElementById('breadcrumb-part').innerHTML = `<span class="active">${part.name}</span>`;
+            document.getElementById('breadcrumb-part').style.display = 'inline';
+            
+            // Показываем карточку детали
+            showPartCard(part);
+            
+            // Показываем группу количества
+            document.getElementById('group-quantity').style.display = 'block';
+            document.getElementById('btn-add-to-cart').classList.add('visible');
+            
+            updateProgress(3);
+            calculatePrice();
+        }
+
+        function showPartCard(part) {
+            const card = document.getElementById('part-card');
+            const nameEl = document.getElementById('part-card-name');
+            const infoEl = document.getElementById('part-info');
+            const unitEl = document.getElementById('price-unit');
+            const priceEl = document.getElementById('price-single');
+            
+            nameEl.textContent = part.name;
+            unitEl.textContent = part.unit;
+            priceEl.textContent = part.price.toLocaleString('ru-RU');
+            
+            // Формируем информацию
+            infoEl.innerHTML = `
+                <div class="part-info-item">
+                    <span class="part-info-label">Артикул:</span>
+                    <span class="part-info-value">${part.article}</span>
+                </div>
+                <div class="part-info-item">
+                    <span class="part-info-label">Характеристики:</span>
+                    <span class="part-info-value">${part.characteristics}</span>
+                </div>
+                <div class="part-info-item">
+                    <span class="part-info-label">Единица измерения:</span>
+                    <span class="part-info-value">${part.unit}</span>
+                </div>
+            `;
+            
+            card.classList.add('visible');
+        }
+
+        // ============================================
+        // УПРАВЛЕНИЕ КОЛИЧЕСТВОМ
+        // ============================================
+        
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (input.value > 1) {
+                input.value = parseInt(input.value) - 1;
+                calculatePrice();
+            }
+        }
+
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (input.value < 999) {
+                input.value = parseInt(input.value) + 1;
+                calculatePrice();
+            }
+        }
+
+        function onQuantityChange() {
+            calculatePrice();
+        }
+
+        function calculatePrice() {
+            if (!currentPart) return;
+            
+            const machine = machineData[currentMachine];
+            const unit = machine.units[currentUnit];
+            const part = unit.parts[currentPart];
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            
+            const total = part.price * quantity;
+            
+            // Обновляем только если есть активная деталь
+            const priceDisplay = document.querySelector('.price-display');
+            if (priceDisplay && priceDisplay.parentElement.classList.contains('visible')) {
+                priceDisplay.innerHTML = `
+                    <div class="price-label">Стоимость за ${part.unit}:</div>
+                    <div class="price-value">${part.price.toLocaleString('ru-RU')} ₽</div>
+                    <div style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
+                        ${quantity} ${part.unit} × ${part.price.toLocaleString('ru-RU')} ₽ = ${total.toLocaleString('ru-RU')} ₽
+                    </div>
+                `;
+            }
+        }
+
+        // ============================================
+        // КОРЗИНА
+        // ============================================
+        
+        function addToCart() {
+            if (!currentMachine || !currentUnit || !currentPart) return;
+            
+            const machine = machineData[currentMachine];
+            const unit = machine.units[currentUnit];
+            const part = unit.parts[currentPart];
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            
+            const cartItem = {
+                machineKey: currentMachine,
+                machineName: machine.name,
+                unitKey: currentUnit,
+                unitName: unit.name,
+                partKey: currentPart,
+                partName: part.name,
+                price: part.price,
+                unit: part.unit,
+                article: part.article,
+                quantity: quantity,
+                characteristics: part.characteristics
+            };
+            
+            // Проверяем, есть ли уже такая деталь в корзине
+            const existingIndex = cart.findIndex(item => 
+                item.machineKey === currentMachine &&
+                item.unitKey === currentUnit &&
+                item.partKey === currentPart
+            );
+            
+            if (existingIndex !== -1) {
+                cart[existingIndex].quantity += quantity;
+            } else {
+                cart.push(cartItem);
+            }
+            
+            saveCart();
+            updateCart();
+            showNotification('✅ Добавлено в корзину!');
+            
+            // Сбрасываем количество
+            document.getElementById('quantity').value = 1;
+            calculatePrice();
+        }
+
+        function updateCart() {
+            const badge = document.getElementById('cart-badge');
+            const emptyCart = document.getElementById('cart-empty');
+            const cartContent = document.getElementById('cart-content');
+            const cartItems = document.getElementById('cart-items');
+            const totalItems = document.getElementById('total-items');
+            const totalQuantity = document.getElementById('total-quantity');
+            const totalPrice = document.getElementById('total-price');
+            
+            badge.textContent = cart.length;
+            
+            if (cart.length === 0) {
+                emptyCart.style.display = 'block';
+                cartContent.style.display = 'none';
+                return;
+            }
+            
+            emptyCart.style.display = 'none';
+            cartContent.style.display = 'block';
+            
+            // Рендерим товары
+            cartItems.innerHTML = '';
+            let totalQty = 0;
+            let totalSum = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                totalQty += item.quantity;
+                totalSum += itemTotal;
+                
+                const itemEl = document.createElement('div');
+                itemEl.className = 'cart-item';
+                itemEl.innerHTML = `
+                    <div class="cart-item-header">
+                        <div class="cart-item-title">${item.partName}</div>
+                        <button class="cart-item-remove" onclick="removeFromCart(${index})" title="Удалить">×</button>
+                    </div>
+                    <div class="cart-item-details">
+                        📍 ${item.machineName} → ${item.unitName}<br>
+                        📦 Артикул: ${item.article}
+                    </div>
+                    <div class="cart-item-controls">
+                        <div class="cart-item-quantity">
+                            <button class="cart-qty-btn" onclick="updateCartQuantity(${index}, -1)">-</button>
+                            <span>${item.quantity} ${item.unit}</span>
+                            <button class="cart-qty-btn" onclick="updateCartQuantity(${index}, 1)">+</button>
+                        </div>
+                        <div class="cart-item-price">${itemTotal.toLocaleString('ru-RU')} ₽</div>
+                    </div>
+                `;
+                
+                cartItems.appendChild(itemEl);
+            });
+            
+            totalItems.textContent = cart.length;
+            totalQuantity.textContent = totalQty;
+            totalPrice.textContent = totalSum.toLocaleString('ru-RU') + ' ₽';
+        }
+
+        function updateCartQuantity(index, delta) {
+            if (cart[index].quantity + delta < 1) return;
+            cart[index].quantity += delta;
+            saveCart();
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            if (confirm('Удалить товар из корзины?')) {
+                cart.splice(index, 1);
+                saveCart();
+                updateCart();
+                showNotification('🗑️ Товар удален из корзины');
+            }
+        }
+
+        function clearCart() {
+            if (confirm('Очистить корзину?')) {
+                cart = [];
+                saveCart();
+                updateCart();
+                showNotification('🗑️ Корзина очищена');
+            }
+        }
+
+        function saveCart() {
+            localStorage.setItem('tdrusstankosbyt_cart', JSON.stringify(cart));
+        }
+
+        // ============================================
+        // ЗАКАЗ
+        // ============================================
+        
+        function showOrderForm() {
+            if (cart.length === 0) {
+                alert('Корзина пуста!');
+                return;
+            }
+            
+            document.getElementById('order-form').classList.add('visible');
+            document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitOrder() {
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const email = document.getElementById('customer-email').value;
+            const company = document.getElementById('customer-company').value;
+            const comment = document.getElementById('customer-comment').value;
+            
+            if (!name || !phone || !email) {
+                alert('Пожалуйста, заполните обязательные поля (Имя, Телефон, Email)');
+                return;
+            }
+            
+            // Формируем заказ
+            let orderText = `
+=== ЗАКАЗ ОТ ${new Date().toLocaleString('ru-RU')} ===
+
+КОНТАКТНАЯ ИНФОРМАЦИЯ:
+Имя: ${name}
+Телефон: ${phone}
+Email: ${email}
+${company ? 'Компания: ' + company : ''}
+
+СОСТАВ ЗАКАЗА:
+${cart.map((item, i) => `
+${i + 1}. ${item.partName}
+   Станок: ${item.machineName}
+   Узел: ${item.unitName}
+   Артикул: ${item.article}
+   Количество: ${item.quantity} ${item.unit}
+   Цена: ${item.price.toLocaleString('ru-RU')} ₽
+   Сумма: ${(item.price * item.quantity).toLocaleString('ru-RU')} ₽
+`).join('\n')}
+
+ИТОГО:
+Позиций: ${cart.length}
+Общее количество: ${cart.reduce((sum, item) => sum + item.quantity, 0)}
+Общая сумма: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toLocaleString('ru-RU')} ₽
+
+${comment ? 'КОММЕНТАРИЙ:\n' + comment : ''}
+
+---
+ТД РУССтанкоСбыт
+Телефон: +7 499 390-85-04
+Email: zakaz@tdrusstankosbyt.ru
+            `.trim();
+            
+            console.log('=== ЗАКАЗ СФОРМИРОВАН ===');
+            console.log(orderText);
+            
+            // Можно отправить через mailto:
+            const mailtoLink = `mailto:zakaz@tdrusstankosbyt.ru?subject=${encodeURIComponent('Заказ деталей станков')}&body=${encodeURIComponent(orderText)}`;
+            window.location.href = mailtoLink;
+            
+            showNotification('✅ Заказ отправлен! Спасибо!');
+            
+            // Очищаем форму и корзину
+            setTimeout(() => {
+                document.getElementById('customer-name').value = '';
+                document.getElementById('customer-phone').value = '';
+                document.getElementById('customer-email').value = '';
+                document.getElementById('customer-company').value = '';
+                document.getElementById('customer-comment').value = '';
+                
+                cart = [];
+                saveCart();
+                updateCart();
+                
+                document.getElementById('order-form').classList.remove('visible');
+            }, 2000);
+        }
+
+        // ============================================
+        // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
+        // ============================================
+        
+        function resetForm() {
+            currentMachine = null;
+            currentUnit = null;
+            currentPart = null;
+            
+            document.getElementById('machineUnit').disabled = true;
+            document.getElementById('partType').disabled = true;
+            document.getElementById('machineUnit').innerHTML = '<option value="">-- Выберите узел станка --</option>';
+            document.getElementById('partType').innerHTML = '<option value="">-- Выберите комплектующую --</option>';
+            
+            document.getElementById('group-unit').style.display = 'none';
+            document.getElementById('group-part').style.display = 'none';
+            document.getElementById('group-quantity').style.display = 'none';
+            document.getElementById('part-card').classList.remove('visible');
+            document.getElementById('btn-add-to-cart').classList.remove('visible');
+            
+            document.getElementById('breadcrumb-machine').innerHTML = '<span>Выберите станок</span>';
+            document.querySelectorAll('.breadcrumb-separator').forEach(el => el.style.display = 'none');
+            document.getElementById('breadcrumb-unit').style.display = 'none';
+            document.getElementById('breadcrumb-part').style.display = 'none';
+            
+            updateProgress(0);
+        }
+
+        function resetUnit() {
+            currentUnit = null;
+            currentPart = null;
+            
+            document.getElementById('partType').disabled = true;
+            document.getElementById('partType').innerHTML = '<option value="">-- Выберите комплектующую --</option>';
+            
+            document.getElementById('group-part').style.display = 'none';
+            document.getElementById('group-quantity').style.display = 'none';
+            document.getElementById('part-card').classList.remove('visible');
+            document.getElementById('btn-add-to-cart').classList.remove('visible');
+            
+            document.getElementById('breadcrumb-unit').style.display = 'none';
+            document.getElementById('breadcrumb-part').style.display = 'none';
+            document.querySelectorAll('.breadcrumb-separator')[1].style.display = 'none';
+        }
+
+        function resetPart() {
+            currentPart = null;
+            
+            document.getElementById('group-quantity').style.display = 'none';
+            document.getElementById('part-card').classList.remove('visible');
+            document.getElementById('btn-add-to-cart').classList.remove('visible');
+            
+            document.getElementById('breadcrumb-part').style.display = 'none';
+            document.getElementById('quantity').value = 1;
+        }
+
+        function updateProgress(step) {
+            const stepCurrent = document.getElementById('step-current');
+            const progressFill = document.getElementById('progress-fill');
+            
+            stepCurrent.textContent = step;
+            
+            const percentages = {
+                0: 0,
+                1: 33,
+                2: 66,
+                3: 100
+            };
+            
+            progressFill.style.width = percentages[step] + '%';
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('visible');
+            
+            setTimeout(() => {
+                notification.classList.remove('visible');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+

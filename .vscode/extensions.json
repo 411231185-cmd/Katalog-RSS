@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "esbenp.prettier-vscode",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "gruntfuggly.todo-tree",
+    "MS-vsliveshare.vsliveshare",
+    "GitHub.copilot"
+  ]
+}
