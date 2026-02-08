@@ -1,0 +1,39 @@
+{
+  "name": "spoki-noki-logger",
+  "displayName": "Spoki Noki Logger",
+  "description": "Автоматически сохраняет лог чата в MD при 'споки ноки'",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["*"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Spoki Noki",
+      "properties": {
+        "spokiNoki.folder": {
+          "type": "string",
+          "default": "chat-logs",
+          "description": "Папка для MD-логов"
+        },
+        "spokiNoki.trigger": {
+          "type": "string",
+          "default": "споки ноки",
+          "description": "Триггер для сохранения"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "16.x",
+    "typescript": "^5.1.6"
+  }
+}
