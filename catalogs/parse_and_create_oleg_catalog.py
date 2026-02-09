@@ -396,5 +396,109 @@ def main():
     print("="*80)
 
 
+def clean_html(raw_html):
+    """Удаляет HTML-теги из строки"""
+    import re
+    cleanr = re.compile('<.*?>')
+    return re.sub(cleanr, '', str(raw_html))
+
+def filter_and_prepare_from_csv(csv_path, top_n=100):
+    df = pd.read_csv(csv_path, encoding='utf-8-sig')
+    # Категории фильтрации
+    mask_stanki = df['Category'].str.contains('Станки', na=False, case=False)
+    mask_revolver = df['Category'].str.contains('Револьверн', na=False, case=False)
+    mask_fartuk = df['Category'].str.contains('Фартук', na=False, case=False)
+    mask_polzushki = df['Title'].str.contains('ползушк', na=False, case=False)
+    mask_kulachki = df['Title'].str.contains('кулачк', na=False, case=False)
+    mask_rezcederzh = df['Title'].str.contains('резцедерж', na=False, case=False)
+
+    # Собираем топовые позиции по категориям
+    stanki = df[mask_stanki].copy()
+    revolver = df[mask_revolver].copy()
+    fartuki = df[mask_fartuk].copy()
+    polzushki = df[mask_polzushki].copy()
+    kulachki = df[mask_kulachki].copy()
+    rezcederzh = df[mask_rezcederzh].copy()
+
+    # Сортировка по цене (если есть)
+    for cat in [stanki, revolver, fartuki, polzushki, kulachki, rezcederzh]:
+        if 'Price' in cat.columns:
+            cat['Price'] = pd.to_numeric(cat['Price'], errors='coerce').fillna(0)
+            cat.sort_values('Price', ascending=False, inplace=True)
+
+    # Собираем итоговый DataFrame
+    result = pd.concat([
+        stanki.head(20),
+        revolver.head(10),
+        fartuki.head(10),
+        polzushki.head(5),
+        kulachki.head(10),
+        rezcederzh.head(5)
+    ], ignore_index=True).head(top_n)
+
+    # Формируем строки для каталога Олега
+    data_rows = []
+    for idx, row in result.iterrows():
+        data_rows.append({
+            'ID': '',
+            'Title': clean_html(row.get('Title', '')),
+            'SKU': row.get('SKU', ''),
+            'Type': 'machine' if 'Станки' in str(row.get('Category', '')) else 'spare',
+            'Brand': 'ТД РУССтанкоСбыт',
+            'Category_Path': row.get('Category', ''),
+            'Price': int(float(row.get('Price', 0))) if str(row.get('Price', '')).replace('.', '', 1).isdigit() else '',
+            'Currency': 'RUB',
+            'Compatible_SKUs': '',
+            'Short_Description': clean_html(str(row.get('Description', '')))[:200],
+            'Full_Description': clean_html(str(row.get('Text', ''))),
+            'Weight_KG': row.get('Weight', ''),
+            'Power_KW': '',
+            'Dimensions_MM': '',
+            'Voltage_V': '380' if 'Станки' in str(row.get('Category', '')) else '',
+            'Main_Photo': row.get('Photo', ''),
+            'Gallery_Photos': '',
+            'Status': 'published' if float(row.get('Price', 0)) > 0 else 'draft'
+        })
+    return data_rows
+
+def main():
+    print("\n📋 Генерация каталога Олега из ATALONNY-PERELIKOVKA.csv\n")
+    # Формируем строки каталога
+    data_rows = filter_and_prepare_from_csv('ATALONNY-PERELIKOVKA.csv', top_n=100)
+
+    # Заголовки
+    row_1 = {
+        'ID': 'ID', 'Title': 'Title', 'SKU': 'SKU', 'Type': 'Type', 'Brand': 'Brand',
+        'Category_Path': 'Category_Path', 'Price': 'Price', 'Currency': 'Currency',
+        'Compatible_SKUs': 'Compatible_SKUs', 'Short_Description': 'Short_Description',
+        'Full_Description': 'Full_Description', 'Weight_KG': 'Weight_KG', 'Power_KW': 'Power_KW',
+        'Dimensions_MM': 'Dimensions_MM', 'Voltage_V': 'Voltage_V', 'Main_Photo': 'Main_Photo',
+        'Gallery_Photos': 'Gallery_Photos', 'Status': 'Status'
+    }
+    row_2 = {
+        'ID': 'ИДЕНТИФИКАТОР', 'Title': 'НАЗВАНИЕ ТОВАРА', 'SKU': 'АРТИКУЛ', 'Type': 'ТИП ОБЪЕКТА',
+        'Brand': 'БРЕНД', 'Category_Path': 'ПУТЬ КАТЕГОРИИ', 'Price': 'ЦЕНА', 'Currency': 'ВАЛЮТА',
+        'Compatible_SKUs': 'СОВМЕСТИМОСТЬ', 'Short_Description': 'КРАТКОЕ ОПИСАНИЕ',
+        'Full_Description': 'ПОЛНОЕ ОПИСАНИЕ', 'Weight_KG': 'ВЕС (КГ)', 'Power_KW': 'МОЩНОСТЬ (КВТ)',
+        'Dimensions_MM': 'ГАБАРИТЫ (ММ)', 'Voltage_V': 'НАПРЯЖЕНИЕ (В)', 'Main_Photo': 'ГЛАВНОЕ ФОТО',
+        'Gallery_Photos': 'ГАЛЕРЕЯ ФОТО', 'Status': 'СТАТУС'
+    }
+    row_3 = {
+        'ID': '(системное)', 'Title': 'Текст', 'SKU': 'Уникальный код', 'Type': 'machine / spare',
+        'Brand': 'Текст', 'Category_Path': 'Разделитель >>>', 'Price': 'Число', 'Currency': 'RUB',
+        'Compatible_SKUs': 'Артикулы через ;', 'Short_Description': '1-2 предложения',
+        'Full_Description': 'Текст без тегов', 'Weight_KG': 'Число', 'Power_KW': 'Число',
+        'Dimensions_MM': 'ДхШхВ', 'Voltage_V': 'Число', 'Main_Photo': '{SKU}_main.jpg',
+        'Gallery_Photos': 'через ;', 'Status': 'published / draft'
+    }
+
+    all_rows = [row_1, row_2, row_3] + data_rows
+    df = pd.DataFrame(all_rows)
+    out_xlsx = 'CATALOG_OLEG_FULL_20260209.xlsx'
+    out_csv = 'CATALOG_OLEG_FULL_20260209.csv'
+    df.to_excel(out_xlsx, index=False, header=False, engine='openpyxl')
+    df.to_csv(out_csv, index=False, header=False, encoding='utf-8-sig')
+    print(f'✅ Каталог сохранён: {out_xlsx}, {out_csv}')
+
 if __name__ == "__main__":
     main()
