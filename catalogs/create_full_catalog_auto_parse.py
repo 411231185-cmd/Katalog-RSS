@@ -19,124 +19,68 @@ print("="*80)
 print("🎯 АВТОМАТИЧЕСКИЙ ПАРСЕР ПОЛНЫХ ДАННЫХ ДЛЯ КАТАЛОГА ОЛЕГА")
 print("="*80)
 
-# === ФУНКЦИИ ПАРСИНГА ===
 
-def parse_tdrusstankosbyt_page(url):
-    """Парсит страницу tdrusstankosbyt.ru - извлекает ВСЕ данные"""
+# === УНИВЕРСАЛЬНЫЙ ПАРСЕР ДЛЯ ВСЕХ САЙТОВ ===
+def get_soup(url):
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
         response = requests.get(url, headers=headers, timeout=15)
-        if response.status_code != 200:
-            return None
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Извлекаем ВСЕ текстовое содержимое со страницы
-        full_text = soup.get_text(separator='\n', strip=True)
-        
-        # Извлекаем заголовок
-        title = soup.find('h1')
-        title_text = title.get_text(strip=True) if title else ''
-        
-        # Извлекаем все параграфы и блоки с данными
-        content_blocks = []
-        
-        # Ищем div'ы с классами содержащими текст/контент
-        for div in soup.find_all(['div', 'section'], class_=re.compile(r't-text|t-descr|t396__elem|tn-atom')):
-            text = div.get_text(separator=' ', strip=True)
-            if text and len(text) > 20:
-                content_blocks.append(text)
-        
-        # Если не нашли через классы, берем все p, h2, h3, ul, ol
-        if not content_blocks:
-            for tag in soup.find_all(['p', 'h2', 'h3', 'ul', 'ol', 'li']):
-                text = tag.get_text(strip=True)
-                if text and len(text) > 10:
-                    content_blocks.append(text)
-        
-        # Объединяем все найденные блоки
-        full_description = '\n\n'.join(content_blocks)
-        
-        # Извлекаем технические характеристики (вес, мощность, габариты, напряжение)
-        weight = extract_weight(full_text)
-        power = extract_power(full_text)
-        dimensions = extract_dimensions(full_text)
-        voltage = extract_voltage(full_text)
-        
-        # Извлекаем цену если есть
-        price = extract_price(full_text)
-        
-        # Формируем краткое описание (первые 2-3 абзаца)
-        short_description = '\n'.join(content_blocks[:3]) if len(content_blocks) >= 3 else '\n'.join(content_blocks)
-        
-        return {
-            'title': title_text,
-            'short_description': short_description[:500] if short_description else '',  # Первые 500 символов
-            'full_description': full_description,
-            'weight': weight,
-            'power': power,
-            'dimensions': dimensions,
-            'voltage': voltage,
-            'price': price,
-            'url': url
-        }
+        if response.status_code == 200:
+            return BeautifulSoup(response.text, 'html.parser')
     except Exception as e:
-        print(f"❌ Ошибка парсинга {url}: {e}")
+        print(f"❌ Ошибка доступа к {url}: {e}")
+    return None
+
+def extract_spec(text, patterns, default=''):
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+        if match:
+            return match.group(1).strip()
+    return default
+
+def parse_generic_page(url):
+    soup = get_soup(url)
+    if not soup:
         return None
 
+    # Удаляем скрипты и стили
+    for script in soup(["script", "style"]):
+        script.decompose()
 
-def parse_tilda_page(url):
-    """Парсит страницу russtankosbyt.tilda.ws"""
-    try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        response = requests.get(url, headers=headers, timeout=15)
-        if response.status_code != 200:
-            return None
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Извлекаем текст
-        full_text = soup.get_text(separator='\n', strip=True)
-        
-        # Заголовок
-        title = soup.find('h1')
-        title_text = title.get_text(strip=True) if title else ''
-        
-        # Все текстовые блоки Tilda
-        content_blocks = []
-        for div in soup.find_all(['div'], class_=re.compile(r't-text|t-descr|t396__elem|tn-atom')):
-            text = div.get_text(separator=' ', strip=True)
-            if text and len(text) > 20:
-                content_blocks.append(text)
-        
-        full_description = '\n\n'.join(content_blocks)
-        short_description = '\n'.join(content_blocks[:3]) if len(content_blocks) >= 3 else '\n'.join(content_blocks)
-        
-        # Характеристики
-        weight = extract_weight(full_text)
-        power = extract_power(full_text)
-        dimensions = extract_dimensions(full_text)
-        voltage = extract_voltage(full_text)
-        price = extract_price(full_text)
-        
-        return {
-            'title': title_text,
-            'short_description': short_description[:500] if short_description else '',
-            'full_description': full_description,
-            'weight': weight,
-            'power': power,
-            'dimensions': dimensions,
-            'voltage': voltage,
-            'price': price,
-            'url': url
-        }
-    except Exception as e:
-        print(f"❌ Ошибка парсинга {url}: {e}")
-        return None
+    title = soup.find('h1')
+    title_text = title.get_text(strip=True) if title else 'Без названия'
+    
+    # Сбор контента
+    content_blocks = []
+    # Специфика для Tilda и основных сайтов
+    tags = soup.find_all(['div', 'p', 'h2', 'h3', 'li', 'tr'], class_=re.compile(r't-text|t-descr|t396|tn-atom|product|content'))
+    if not tags: # Если классов нет, берем стандартные теги
+        tags = soup.find_all(['p', 'h2', 'h3', 'li', 'td'])
+    for tag in tags:
+        text = tag.get_text(separator=' ', strip=True)
+        if text and len(text) > 15:
+            content_blocks.append(text)
+
+    full_text = "\n".join(content_blocks)
+    
+    # Извлечение ТТХ через улучшенные паттерны
+    data = {
+        'title': title_text,
+        'url': url,
+        'full_description': "\n\n".join(list(dict.fromkeys(content_blocks))), # удаляем дубли
+        'weight': extract_spec(full_text, [r'(?:масса|вес).*?(\d[\d\s]*)\s*(?:кг|т|kg|t)', r'(\d[\d\s]*)\s*кг']),
+        'power': extract_spec(full_text, [r'(?:мощность|привод).*?(\d+(?:\.\d+)?)\s*кВт', r'(\d+(?:\.\d+)?)\s*кВт']),
+        'dimensions': extract_spec(full_text, [r'(\d+)\s*[xх×]\s*(\d+)\s*[xх×]\s*(\d+)\s*мм']),
+        'spindle': extract_spec(full_text, [r'(?:отверстие|шпиндел).*?(\d+)\s*мм']),
+        'rmc': extract_spec(full_text, [r'(?:РМЦ|расстояние.*?центр).*?(\d+)\s*мм']),
+        'price': extract_spec(full_text, [r'цена.*?(\d[\d\s]*)\s*(?:руб|₽)', r'(\d[\d\s]*)\s*₽']),
+    }
+    # Очистка цены от пробелов
+    if data['price']:
+        data['price'] = re.sub(r'\s+', '', data['price'])
+    # Краткое описание
+    data['short_description'] = "\n".join(content_blocks[:3])[:500] if content_blocks else ''
+    return data
 
 
 # === ФУНКЦИИ ИЗВЛЕЧЕНИЯ ХАРАКТЕРИСТИК ===
@@ -209,95 +153,81 @@ def extract_price(text):
     return ''
 
 
-# === СПИСОК СТРАНИЦ ДЛЯ ПАРСИНГА ===
 
+# === СПИСОК СТРАНИЦ ДЛЯ ПАРСИНГА (5+ сайтов) ===
 URLS_TO_PARSE = {
     'СТАНКИ': [
-        'https://tdrusstankosbyt.ru/stanokrtrt16k20',
-        'https://russtankosbyt.tilda.ws/stanokrtrt16k20',
-        'https://tdrusstankosbyt.ru/stanokrtrt1m63ndip300',
-        'https://russtankosbyt.tilda.ws/stanokrtrt16k40',
+        'https://td-rss.ru/stanok-1n65',
         'https://tdrusstankosbyt.ru/stanokrtrt1n65ndip500',
-        'https://tdrusstankosbyt.ru/stanokrt117',
-        'https://tdrusstankosbyt.ru/stanokrtrt817',
+        'https://tdrusstankosbyt.ru/stanokrtrt1m63ndip300',
+        'https://tdrusstankosbyt.ru/stanokrtrt16k20',
+        'https://rosstanko.com/stanok-1n65',
+        'https://russtanko-rzn.ru/stanok-1n65',
+        'https://stankoartel.com/stanok-1n65',
     ],
-    'РЕВОЛЬВЕРНЫЕ ГОЛОВКИ': [
-        'https://tdrusstankosbyt.ru/remontrevolvernyhgolovok16k30f340000',
-        'https://tdrusstankosbyt.ru/remontrevolvernyhgolovok',
-        'https://russtankosbyt.tilda.ws/revolvernyagolovkachpu',
+    'ЗАПЧАСТИ': [
+        'https://tdrusstankosbyt.ru/valy',
+        'https://tdrusstankosbyt.ru/kolesazubchatiye',
+        'https://rosstanko.com/valy',
+        'https://russtanko-rzn.ru/valy',
+        'https://stankoartel.com/valy',
     ]
 }
 
 
 # === ГЛАВНАЯ ФУНКЦИЯ ===
 
-def main():
+
+
     all_products = []
-    
     for category, urls in URLS_TO_PARSE.items():
         print(f"\n{'='*80}")
         print(f"📁 Категория: {category}")
         print(f"{'='*80}\n")
-        
         for url in urls:
             print(f"🌐 Парсинг: {url}")
-            
-            # Определяем какой парсер использовать
-            if 'tilda.ws' in url:
-                data = parse_tilda_page(url)
-            else:
-                data = parse_tdrusstankosbyt_page(url)
-            
+            data = parse_generic_page(url)
             if data:
                 data['category'] = category
                 all_products.append(data)
                 print(f"✅ Успех! Заголовок: {data['title'][:60]}...")
-                print(f"   Вес: {data['weight']} кг, Мощность: {data['power']} кВт")
-                print(f"   Габариты: {data['dimensions']}, Напряжение: {data['voltage']} В")
+                print(f"   Вес: {data.get('weight','')} кг, Мощность: {data.get('power','')} кВт")
+                print(f"   Габариты: {data.get('dimensions','')}, Цена: {data.get('price','')}")
                 print(f"   Описание: {len(data['full_description'])} символов\n")
             else:
                 print(f"❌ Не удалось распарсить\n")
-            
-            time.sleep(2)  # Пауза между запросами
-    
+            time.sleep(2)
     # === СОЗДАНИЕ EXCEL ===
-    
     if not all_products:
         print("\n❌ Нет данных для создания каталога!")
         return
-    
     print(f"\n{'='*80}")
     print(f"📊 СОЗДАНИЕ КАТАЛОГА")
     print(f"{'='*80}\n")
-    
-    # Создаем DataFrame
     rows = []
     for idx, product in enumerate(all_products, start=1):
         row = {
             'ID': f"PRODUCT.{idx:03d}",
             'Title': product['title'],
             'SKU': f"SKU.{idx:03d}",
-            'Type': 'machine' if 'револьвер' not in product['category'].lower() else 'spare',
-            'Brand': '',  # Без упоминания брендов
+            'Type': 'machine' if 'запчаст' not in product['category'].lower() else 'spare',
+            'Brand': '',
             'Category_Path': f"Каталог >>> {product['category']}",
             'Price': product.get('price', ''),
             'Currency': 'RUB' if product.get('price') else '',
             'Compatible_SKUs': '',
-            'Short_Description': product['short_description'],
-            'Full_Description': product['full_description'],
-            'Weight_KG': product['weight'],
-            'Power_KW': product['power'],
-            'Dimensions_MM': product['dimensions'],
-            'Voltage_V': product['voltage'],
+            'Short_Description': product.get('short_description',''),
+            'Full_Description': product.get('full_description',''),
+            'Weight_KG': product.get('weight',''),
+            'Power_KW': product.get('power',''),
+            'Dimensions_MM': product.get('dimensions',''),
+            'Voltage_V': '',
             'Main_Photo': '',
             'Gallery_Photos': '',
             'Status': 'active'
         }
         rows.append(row)
-    
     df = pd.DataFrame(rows)
-    
-    # Создаем заголовки как в шаблоне
     header_row_1 = pd.DataFrame([{
         'ID': 'ID товара',
         'Title': 'Название',
@@ -318,7 +248,6 @@ def main():
         'Gallery_Photos': 'Галерея фото',
         'Status': 'Статус'
     }])
-    
     header_row_2 = pd.DataFrame([{
         'ID': 'число',
         'Title': 'текст',
@@ -339,18 +268,12 @@ def main():
         'Gallery_Photos': 'URL1, URL2, URL3',
         'Status': 'active/inactive'
     }])
-    
-    # Объединяем
     final_df = pd.concat([header_row_1, header_row_2, df], ignore_index=True)
-    
-    # Сохраняем
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file_xlsx = f"CATALOG_OLEG_FULL_AUTO_{timestamp}.xlsx"
     output_file_csv = f"CATALOG_OLEG_FULL_AUTO_{timestamp}.csv"
-    
     final_df.to_excel(output_file_xlsx, index=False, engine='openpyxl')
     final_df.to_csv(output_file_csv, index=False, encoding='utf-8-sig')
-    
     print(f"✅ Создано записей: {len(rows)}")
     print(f"📄 Файлы сохранены:")
     print(f"   - {output_file_xlsx}")
@@ -358,6 +281,6 @@ def main():
     print(f"\n💡 ВСЕ ПОЛНЫЕ ОПИСАНИЯ извлечены с сайтов!")
     print("="*80)
 
-
 if __name__ == "__main__":
     main()
+            'Power_KW': product['power'],
