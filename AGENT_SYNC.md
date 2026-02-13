@@ -1,17 +1,31 @@
-# 🧬 AGENT_SYNC: Katalog-RSS (ДНК ПРОЕКТА)
+# AGENT SYNC STATUS
 
-## 🎭 РОЛЬ И СПЕЦИАЛИЗАЦИЯ
-**Роль:** Мастер-архитектор данных
-- **Цель:** Обеспечение целостности и актуальности номенклатурных баз (Excel/DropBox/JSON).
-- **Стек:** Python, Pandas, DropBox SDK, JSON Schema.
+## Репозиторий
+{repo_name}
 
-## 🌐 ИСТОЧНИКИ ДАННЫХ (SOURCE OF TRUTH)
-- **Repo:** [https://github.com/411231185-cmd/Katalog-RSS](https://github.com/411231185-cmd/Katalog-RSS)
-- **External:** DropBox (Public/Price-Lists), RSS-Catalog-Master.
+## Группа/Роль
+{group} / {role}
 
-## 🛠 АКТУАЛЬНЫЕ ЗАДАЧИ
-- [ ] Задача №1: Провести полный аудит файлов репозитория и составить план автоматизации под текущую роль.
-- [ ] Задача №2: Настроить авто-синхронизацию изменений в Excel с GitHub JSON базой.
+## Цель агента
+Автоматизация задач: мониторинг, синхронизация, отчёты для ТД РУССтанкоСбыт.
 
-## 📝 ИСТОРИЯ ИЗМЕНЕНИЙ (LOG)
-- [2026-02-12] - Инициализация локального агента по мастер-шаблону.
+## Стек
+- Python (pathlib, json, subprocess)
+- PowerShell (git sync)
+- GitHub API
+
+## Текущие задачи (чек-лист)
+- [ ] Синхронизация с upstream
+- [ ] Генерация отчётов (agents_status.json)
+- [ ] Поиск дублей файлов
+- [ ] Интеграция с AmoCRM/Yandex
+
+## Блокеры
+- Нет AGENT_SYNC.md (исправлено)
+- Отсутствует requirements.txt
+
+## Последнее обновление
+{now}
+
+---
+Managed by deploy_agent_sync.py
