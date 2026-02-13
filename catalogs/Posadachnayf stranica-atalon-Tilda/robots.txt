@@ -1,0 +1,25 @@
+User-Agent: *
+Disallow: /page79640916.html
+Disallow: /error
+Disallow: /page79676686.html
+Disallow: /head
+Disallow: /page79676736.html
+Disallow: /foot
+Disallow: /page101043066.html
+Disallow: /vsetovary
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /members/login*
+Disallow: /members/signup*
+Disallow:
+
+
+Sitemap: https://tdrusstankosbyt.ru/sitemap.xml
+Sitemap: https://tdrusstankosbyt.ru/sitemap-store.xml
+Sitemap: https://tdrusstankosbyt.ru/sitemap-feeds.xml
