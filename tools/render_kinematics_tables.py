@@ -14,8 +14,9 @@ SECTION_ORDER = [
 
 TABLE_HEADER = "| Поз. | Z | Модуль | Ширина | Обозначение | Наименование |\n|---|---|---|---|---|---|"
 
+import sys
 def read_csv():
-    with open(CSV_PATH, encoding="utf-8") as f:
+    with open(CSV_PATH, encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         rows = list(reader)
     return rows
@@ -34,6 +35,8 @@ def render_markdown(rows):
     return "\n".join(out)
 
 def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     rows = read_csv()
     md = render_markdown(rows)
     print(md)
