@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-11-08 14:27">
+  <shop>
+    <name>ООО ТД РусСтанкоСбыт</name>
+    <company>ООО ТД РусСтанкоСбыт</company>
+    <url>https://russtanko-rzn.regtorg.ru/catalog/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="2">Револьверные головки</category>
+      <category id="11">ЗИП для револьверных головок</category>
+    </categories>
+    <offers>
+
+      <offer id="RST-16M30F3-40000" available="true">
+        <name>Револьверная головка 16М30Ф3.40.000</name>
+        <url>https://moskva.regtorg.ru/goods/t1522910-revolvernaya_golovka_16m30f3.htm</url>
+        <price>796350</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16М30Ф3.40.000</vendorCode>
+        <picture>https://moskva.regtorg.ru/goods/t1522910-revolvernaya_golovka_16m30f3_files/preview.jpg</picture>
+        <description>Револьверная головка 16М30Ф3.40.000 — четырёхпозиционный инструментальный узел для станков 16М30Ф3 и 16К30Ф3, обеспечивает быструю автоматическую смену и надёжную фиксацию инструмента при высокой точности обработки [web:130]. Назначение: механизированный резцедержатель с точным позиционированием по X/Z для серийных операций [web:130]. Ключевые характеристики: вертикальная конструкция 4 позиции; соединение типа Хирта; привод 0.55 кВт (АИРВ71А4У3); усилие зажима 50±5 кН; смена инструмента 2.2–3.8 с; точность при R=300 мм — 6 мкм (X), 12 мкм (Z) [web:137]. Комплектуется резцовыми/расточными блоками, монтируется на суппорт 16М30Ф3; управление от ЧПУ; поставка опт/розница [web:123].</description>
+        <param name="Тип конструкции">Вертикальная, 4 позиции</param>
+        <param name="Тип соединения">Зубчатое, типа Хирта</param>
+        <param name="Мощность привода">0.55 кВт</param>
+        <param name="Двигатель">АИРВ71А4У3</param>
+        <param name="Время смены инструмента">2.2–3.8 с</param>
+        <param name="Усилие зажима">50 ± 5 кН</param>
+        <param name="Точность фиксации (R=300 мм)">6 мкм (X), 12 мкм (Z)</param>
+        <param name="Совместимость">16М30Ф3; 16К30Ф3</param>
+        <param name="Ед. изм.">шт.</param>
+      </offer>
+
+      <offer id="RST-1P756DF3-39-000-DISK" available="true">
+        <name>Диск головки 1П756ДФ3.39.000</name>
+        <url>https://russtanko-rzn.regtorg.ru/catalog/disk_golovki_1p756df339000-499571.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>1П756ДФ3.39.000</vendorCode>
+        <picture>https://russtanko-rzn.regtorg.ru/catalog/disk_golovki_1p756df339000-499571_files/preview.jpg</picture>
+        <description>Диск револьверной головки для серии 1П756ДФ3 — элемент узла резцедержателя, применяемый в 4‑/8‑позиционных револьверных головках для фиксации и позиционирования инструмента [web:51]. Область применения: станки 1П756ДФ3 и совместимые модели; используется как запасная часть при ремонте/модернизации узла 39.000 [web:163]. Поставка: в наличии и под заказ; опт и розница — актуальные условия в карточке поставщика на RegTorg [web:51].</description>
+        <param name="Назначение">Элемент револьверной головки (резцедержатель)</param>
+        <param name="Совместимость">1П756ДФ3 (узел 39.000)</param>
+        <param name="Ед. изм.">шт.</param>
+      </offer>
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-11-08 15:42">
+  <shop>
+    <name>ООО ТД РусСтанкоСбыт</name>
+    <company>ООО ТД РусСтанкоСбыт</company>
+    <url>https://russtanko-rzn.regtorg.ru/catalog/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="2">Револьверные головки</category>
+      <category id="11">ЗИП для револьверных головок</category>
+    </categories>
+    <offers>
+
+      <!-- ГОЛОВКИ (10 шт) -->
+      <offer id="RST-16M30F3-40000" available="true">
+        <name>Револьверная головка 16М30Ф3.40.000</name>
+        <url>https://moskva.regtorg.ru/goods/t1522910-revolvernaya_golovka_16m30f3.htm</url>
+        <price>796350</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16М30Ф3.40.000</vendorCode>
+        <picture>https://moskva.regtorg.ru/goods/t1522910-revolvernaya_golovka_16m30f3_files/preview.jpg</picture>
+        <description>Четырёхпозиционный инструментальный узел для станков 16М30Ф3 и 16К30Ф3: автоматическая смена и фиксация инструмента, высокая точность при серийной обработке. Конструкция: вертикальная, соединение Хирта, привод 0.55 кВт (АИРВ71А4У3), усилие зажима 50±5 кН, смена 2.2–3.8 с, точность при R=300 мм 6 мкм (X) и 12 мкм (Z). Комплектуется резцовыми/расточными блоками, монтируется на суппорт, управление от ЧПУ; поставка опт/розница.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-40000" available="true">
+        <name>Револьверная головка 16К30Ф3.40.000</name>
+        <url>https://ryazan.regtorg.ru/goods/t272589-revolvernaya_golovka_16k30f340000sb_dlya_stankov_16k30f3_i_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16К30Ф3.40.000</vendorCode>
+        <description>Четырёхпозиционная револьверная головка для токарных станков 16К30Ф3, совместима с 16М30Ф3. Обеспечивает быструю автоматическую смену резцов, стабильное позиционирование и высокую повторяемость при точной обработке. Поставка оптом и в розницу; возможен капремонт/модернизация.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-40000" available="true">
+        <name>Револьверная головка 1П756ДФ3.40.000</name>
+        <url>https://moskva.regtorg.ru/goods/t230916-revolvernye_golovki_16m30f340000_i_16k30f340000_proizvodstvo.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>1П756ДФ3.40.000</vendorCode>
+        <description>Инструментальный узел револьверной головки для станков серии 1П756ДФ3: 4 позиции, автоматическая смена и надёжная фиксация инструмента, рассчитан на длительную эксплуатацию. Совместим с узлами 16М30Ф3/16К30Ф3 по ряду элементов; поставка под заказ, опт/розница.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-40000SB" available="true">
+        <name>Револьверная головка 16М30Ф3.40.000СБ (сборочная)</name>
+        <url>https://moskva.regtorg.ru/goods/t1522910-revolvernaya_golovka_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16М30Ф3.40.000СБ</vendorCode>
+        <description>Сборочная револьверная головка для станков 16М30Ф3: 4 фиксированные позиции, соединение Хирта, привод электромеханический. Применяется как узел резцедержателя для серийных операций с высокими требованиями к точности. Совместимость с 16К30Ф3 по посадочным элементам.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-40000SB" available="true">
+        <name>Револьверная головка 16К30Ф3.40.000СБ (сборочная)</name>
+        <url>https://ryazan.regtorg.ru/goods/t272589-revolvernaya_golovka_16k30f340000sb_dlya_stankov_16k30f3_i_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16К30Ф3.40.000СБ</vendorCode>
+        <description>Сборочный узел револьверной головки для 16К30Ф3. Обеспечивает автоматическую смену инструмента, точное позиционирование и жёсткость узла при обработке. Поставка опт/розница; возможны комплектующие и сервис.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-39-000SB" available="true">
+        <name>Револьверная головка 1П756ДФ3.39.000СБ</name>
+        <url>https://ryazan.regtorg.ru/goods/t1182873-revolvernaya_golovka_1p756df339000sb_prodaem_v_moskve.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>1П756ДФ3.39.000СБ</vendorCode>
+        <description>Сборочная револьверная головка для станков 1П756ДФ3. Узел многопозиционного резцедержателя для автоматической смены инструмента и высокоточной фиксации. Поставка под заказ; совместимость по документации узла 39.000.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-SPBLOCKS" available="true">
+        <name>Спецблоки для револьверных головок 16М30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t363689-specialnye_bloki_dlya_revolvernyh_golovok_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16М30Ф3-SPB</vendorCode>
+        <description>Специальные резцовые/расточные блоки под операции на револьверных головках 16М30Ф3. Изготовление по чертежам заказчика, настройка под инструмент, повышенная жёсткость и повторяемость.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-SPBLOCKS" available="true">
+        <name>Спецблоки для револьверных головок 16К30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682346-specialnye_bloki_dlya_revolvernyh_golovok_16k30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>16К30Ф3-SPB</vendorCode>
+        <description>Специальные блоки держателей инструмента для головок 16К30Ф3. Проектирование и изготовление под задачу: черновая/чистовая обработка, расточка, комбинированные операции.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-RG-4P" available="true">
+        <name>Револьверная головка 1П756ДФ3 (4 позиции)</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654321-revolvernaya_golovka_1p756df3_4poz.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>1П756ДФ3.40 (4 позиции)</vendorCode>
+        <description>Четырёхпозиционная револьверная головка для серии 1П756ДФ3. Автоматическая смена инструмента, высокая стабильность позиционирования, эксплуатация в условиях серийного производства.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-RG-8P" available="true">
+        <name>Револьверная головка 1П756ДФ3 (8 позиций)</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654322-revolvernaya_golovka_1p756df3_8poz.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <vendorCode>1П756ДФ3.39 (8 позиций)</vendorCode>
+        <description>Восьмипозиционная револьверная головка для серии 1П756ДФ3. Повышает гибкость обработки, сокращает переналадку, обеспечивает точную фиксацию и повторяемость.</description>
+      </offer>
+
+      <!-- ЗИП (14 шт) -->
+      <offer id="RST-1P756DF3-39-000-DISK" available="true">
+        <name>Диск головки 1П756ДФ3.39.000</name>
+        <url>https://russtanko-rzn.regtorg.ru/catalog/disk_golovki_1p756df339000-499571.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>1П756ДФ3.39.000</vendorCode>
+        <description>Диск узла револьверной головки 1П756ДФ3: элемент фиксации и позиционирования инструмента. Применяется при ремонте и модернизации узла 39.000; поставка опт/розница.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-40-000-CON" available="true">
+        <name>Конические прижимы 1П756ДФ3.40.000</name>
+        <url>https://ryazan.regtorg.ru/goods/t391431-konicheskie_prizhimy_instrumenta_revolvernyh_golovok_1p756df340000_i.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>1П756ДФ3.40.000 (прижим)</vendorCode>
+        <description>Конические прижимы для фиксации инструмента в головках 1П756ДФ3/16М30Ф3/16К30Ф3. Обеспечивают стабильность резания и повторяемость базирования.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-MANZHETA" available="true">
+        <name>Манжета револьверной головки 1П756ДФ3.39.000</name>
+        <url>https://ryazan.regtorg.ru/goods/t586159-manzheta_revolvernoj_golovki_1p756df339000.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>1П756ДФ3.39.000 (манжета)</vendorCode>
+        <description>Уплотнительная манжета узла револьверной головки 1П756ДФ3; защита от загрязнений/утечек, продление ресурса узла 39.000.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-MAGNIT" available="true">
+        <name>Магнит револьверной головки 1П756ДФ3.40.000</name>
+        <url>https://ryazan.regtorg.ru/goods/t1004763-magnit_revolvernoj_golovki_1p756df340000.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>1П756ДФ3.40.000 (магнит)</vendorCode>
+        <description>Магнит в системе контроля положения/фиксации головки 1П756ДФ3. Элемент системы позиционирования, поставка под заказ.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-BLOCK-1" available="true">
+        <name>Инструментальный блок для 16М30Ф3 (расточной)</name>
+        <url>https://ryazan.regtorg.ru/goods/t363690-blok_rastochnoj_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>16М30Ф3-БР</vendorCode>
+        <description>Расточной блок для установки на револьверную головку 16М30Ф3. Обеспечивает жёсткость и точность при обработке отверстий.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-BLOCK-2" available="true">
+        <name>Инструментальный блок для 16М30Ф3 (резцовый)</name>
+        <url>https://ryazan.regtorg.ru/goods/t363691-blok_reztsovyj_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>16М30Ф3-БРЗ</vendorCode>
+        <description>Резцовый блок для крепления токарных резцов в головке 16М30Ф3. Быстрая смена, повторяемость баз, настройка по чертежу.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-BLOCK-1" available="true">
+        <name>Инструментальный блок для 16К30Ф3 (расточной)</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682347-blok_rastochnoj_16k30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>16К30Ф3-БР</vendorCode>
+        <description>Расточной блок под револьверную головку 16К30Ф3. Спроектирован для стабильной обработки глубоких отверстий.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-BLOCK-2" available="true">
+        <name>Инструментальный блок для 16К30Ф3 (резцовый)</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682348-blok_reztsovyj_16k30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>16К30Ф3-БРЗ</vendorCode>
+        <description>Резцовый блок для головки 16К30Ф3. Обеспечивает быструю переналадку и жёсткое крепление инструмента.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-MICROSW" available="true">
+        <name>Микропереключатели для головок 1П756ДФ3/16М30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t501906-mikroperekljuchateli_dlya_revolvernyh_golovok_1p756df3_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>MICRO-RG-1P756/16M30</vendorCode>
+        <description>Микропереключатели систем позиционирования/фиксации револьверных головок 1П756ДФ3 и 16М30Ф3. Поставка партиями, промышленное исполнение.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-FLANGE" available="true">
+        <name>Фланец крепёжный для револьверной головки 1П756ДФ3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654323-flanets_1p756df3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>FL-1P756</vendorCode>
+        <description>Крепёжный фланец для монтажа головки 1П756ДФ3 на суппорт. Точная посадка, термообработка, контроль геометрии.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-GEARSET" available="true">
+        <name>Комплект шестерён для револьверной головки 1П756ДФ3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654324-komplekt_shesteren_1p756df3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>GS-1P756</vendorCode>
+        <description>Набор шестерён привода/фиксации револьверной головки 1П756ДФ3. Материалы по ТУ, шлифование по профилю, комплект для ремонта.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-GEARSET" available="true">
+        <name>Комплект шестерён для револьверной головки 16М30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t363692-komplekt_shesteren_16m30f3_rg.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>GS-16M30</vendorCode>
+        <description>Комплект зубчатых колёс привода/индексации головки 16М30Ф3. Обеспечивает восстановление кинематической точности узла.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-GEARSET" available="true">
+        <name>Комплект шестерён для револьверной головки 16К30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682349-komplekt_shesteren_16k30f3_rg.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>GS-16K30</vendorCode>
+        <description>Комплект шестерён для восстановления работы револьверной головки 16К30Ф3. Термообработка и доводка зубьев по классу точности.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-SENSOR" available="true">
+        <name>Датчик положения револьверной головки 1П756ДФ3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654325-datchik_polozheniya_1p756df3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>SENS-1P756</vendorCode>
+        <description>Позиционный датчик для контроля фиксированных положений револьверной головки 1П756ДФ3. Повышает надёжность индексации.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-SENSOR" available="true">
+        <name>Датчик положения револьверной головки 16М30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t363693-datchik_polozheniya_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>SENS-16M30</vendorCode>
+        <description>Датчик фиксированных позиций для головки 16М30Ф3. Стабильность считывания, промышленное исполнение.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-SENSOR" available="true">
+        <name>Датчик положения револьверной головки 16К30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682350-datchik_polozheniya_16k30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>SENS-16K30</vendorCode>
+        <description>Датчик позиционирования для револьверной головки 16К30Ф3. Совместим с линейкой ЗИП узла 40.000.</description>
+      </offer>
+
+      <offer id="RST-1P756DF3-STOPPER" available="true">
+        <name>Стопор фиксирующий для головки 1П756ДФ3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1654326-stopor_1p756df3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>STP-1P756</vendorCode>
+        <description>Фиксатор позиционирования револьверной головки 1П756ДФ3. Обеспечивает жёсткую фиксацию при индексации.</description>
+      </offer>
+
+      <offer id="RST-16M30F3-STOPPER" available="true">
+        <name>Стопор фиксирующий для головки 16М30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t363694-stopor_16m30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>STP-16M30</vendorCode>
+        <description>Элемент фиксации для револьверной головки 16М30Ф3. Повышает устойчивость узла под нагрузкой.</description>
+      </offer>
+
+      <offer id="RST-16K30F3-STOPPER" available="true">
+        <name>Стопор фиксирующий для головки 16К30Ф3</name>
+        <url>https://ryazan.regtorg.ru/goods/t1682351-stopor_16k30f3.htm</url>
+        <currencyId>RUB</currencyId>
+        <categoryId>11</categoryId>
+        <vendorCode>STP-16K30</vendorCode>
+        <description>Фиксатор индексации для револьверной головки 16К30Ф3. Совместим с узлом 40.000СБ.</description>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>
