@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<yml_catalog date="2026-02-20 14:06">
+  <shop>
+    <name>Test Shop</name>
+    <company>ТД РУССтанкоСбыт</company>
+    <url>http://testshop.ru/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Патроны</category>
+      <category id="2">Револьверные головки</category>
+      <category id="3">ШВП</category>
+      <category id="4">Суппорты</category>
+      <category id="5">Шпиндели</category>
+      <category id="6">Люнеты</category>
+      <category id="7">Резцедержатели</category>
+      <category id="8">Винты</category>
+      <category id="9">Муфты</category>
+      <category id="10">Шестерни</category>
+    </categories>
+    <offers>
+      <offer id="546375" available="true">
+        <url>http://testshop.ru/p546375</url>
+        <price>531250</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Патрон токарный 4-кулачковый ф1000 мм (YML6375)</name>
+        <description>Патрон токарный 4-кулачковый ф1000 мм. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546375</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546376" available="true">
+        <url>http://testshop.ru/p546376</url>
+        <price>231250</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Патрон токарный 4-кулачковый ф630-800 мм (YML6376)</name>
+        <description>Патрон токарный 4-кулачковый ф630-800 мм. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546376</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546377" available="true">
+        <url>http://testshop.ru/p546377</url>
+        <price>262500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Револьверная головка для станков с ЧПУ (YML6377)</name>
+        <description>Револьверная головка для станков с ЧПУ. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546377</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546378" available="true">
+        <url>http://testshop.ru/p546378</url>
+        <price>206250</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>ШВП шарико-винтовая пара для станков с ЧПУ (YML6378)</name>
+        <description>ШВП шарико-винтовая пара для станков с ЧПУ. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546378</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546379" available="true">
+        <url>http://testshop.ru/p546379</url>
+        <price>154344</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>4</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Суппорт токарный в сборе с резцедержателем (YML6379)</name>
+        <description>Суппорт токарный в сборе с резцедержателем. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546379</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546380" available="true">
+        <url>http://testshop.ru/p546380</url>
+        <price>134375</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шпиндель токарного станка в сборе (YML6380)</name>
+        <description>Шпиндель токарного станка в сборе. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546380</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546381" available="true">
+        <url>http://testshop.ru/p546381</url>
+        <price>218750</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Люнет неподвижный (тяжелая группа) (YML6381)</name>
+        <description>Люнет неподвижный (тяжелая группа). Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546381</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546382" available="true">
+        <url>http://testshop.ru/p546382</url>
+        <price>100000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>7</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Резцедержатель четырехпозиционный (YML6382)</name>
+        <description>Резцедержатель четырехпозиционный. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546382</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546383" available="true">
+        <url>http://testshop.ru/p546383</url>
+        <price>115312</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>8</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Винт ходовой (универсальный) (YML6383)</name>
+        <description>Винт ходовой (универсальный). Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546383</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546384" available="true">
+        <url>http://testshop.ru/p546384</url>
+        <price>54688</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Муфта обгонная (YML6384)</name>
+        <description>Муфта обгонная. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546384</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546385" available="true">
+        <url>http://testshop.ru/p546385</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z20 (YML6385)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z20. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546385</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546386" available="true">
+        <url>http://testshop.ru/p546386</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z25 (YML6386)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z25. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546386</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546387" available="true">
+        <url>http://testshop.ru/p546387</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z30 (YML6387)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z30. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546387</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546388" available="true">
+        <url>http://testshop.ru/p546388</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z35 (YML6388)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z35. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546388</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546389" available="true">
+        <url>http://testshop.ru/p546389</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z40 (YML6389)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z40. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546389</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546390" available="true">
+        <url>http://testshop.ru/p546390</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z45 (YML6390)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z45. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546390</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546391" available="true">
+        <url>http://testshop.ru/p546391</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z50 (YML6391)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z50. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546391</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546392" available="true">
+        <url>http://testshop.ru/p546392</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z55 (YML6392)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z55. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546392</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546393" available="true">
+        <url>http://testshop.ru/p546393</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z60 (YML6393)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z60. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546393</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="546394" available="true">
+        <url>http://testshop.ru/p546394</url>
+        <price>7812</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Шестерня цилиндрическая модуль 2 Z65 (YML6394)</name>
+        <description>Шестерня цилиндрическая модуль 2 Z65. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>TEST-546394</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
