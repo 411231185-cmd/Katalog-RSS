@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RegTorg YML catalog, ready for upload -->
+<yml_catalog>
+  <shop>
+    <!-- ...existing shop metadata and categories... -->
+    <offers>
+      <!-- Offers content copied from RegTorg_catalog_FINAL_200_richdesc copy.xml -->
+      <!-- Begin offers -->
+      [PASTE FULL OFFERS CONTENT FROM RegTorg_catalog_FINAL_200_richdesc copy.xml HERE]
+      <!-- End offers -->
+    </offers>
+  </shop>
+</yml_catalog>

@@ -2,3 +2,5 @@
 *тильда прайс*
 __pycache__/
 Kluchi.env
+
+.venv/

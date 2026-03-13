@@ -177,8 +177,7 @@ URLS_TO_PARSE = {
 
 # === ГЛАВНАЯ ФУНКЦИЯ ===
 
-
-
+def main():
     all_products = []
     for category, urls in URLS_TO_PARSE.items():
         print(f"\n{'='*80}")
@@ -283,4 +282,3 @@ URLS_TO_PARSE = {
 
 if __name__ == "__main__":
     main()
-            'Power_KW': product['power'],
