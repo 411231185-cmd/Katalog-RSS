@@ -1,6 +1,26 @@
-﻿# Tilda page exports
-*тильда прайс*
-__pycache__/
-Kluchi.env
+﻿# 🛡️ Katalog-RSS - БЕЗОПАСНЫЙ .gitignore
+# ============================
 
+# Виртуальное окружение
 .venv/
+
+# Временные CSV файлы
+*.csv.temp*
+*.temp.csv
+*.csv.backup.*
+* copy.csv
+
+# Lock файлы (как ваш .~lock)
+.~lock.*
+.#*
+
+# Временные файлы Office
+~$*
+
+# Редакторы
+.vscode/
+.idea/
+
+# Системный мусор
+.DS_Store
+Thumbs.db
