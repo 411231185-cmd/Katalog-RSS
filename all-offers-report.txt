@@ -1,0 +1,6 @@
+INPUT FILE: C:\GitHub-Repositories\Katalog-RSS\all-offers-list.txt
+TOTAL LINES: 38070
+UNIQUE ITEMS: 85
+DUPLICATES: 8
+UNIQUE FILE: C:\GitHub-Repositories\Katalog-RSS\all-offers-list-unique.txt
+DUPES FILE: C:\GitHub-Repositories\Katalog-RSS\all-offers-list-dupes.txt
