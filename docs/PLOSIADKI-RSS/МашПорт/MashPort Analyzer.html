@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>MashPort Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont; background:#020617; color:#e5e7eb; }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+    .card { background:#020617; border:1px solid #1f2937; border-radius:12px; padding:16px; box-shadow:0 0 25px rgba(56,189,248,0.2); }
+    h1 { font-size:24px; margin:0 0 12px; }
+    .status { font-size:13px; color:#9ca3af; margin-bottom:10px; }
+    .btn-row { display:flex; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+    button { cursor:pointer; border-radius:8px; border:none; padding:10px 16px; font-size:14px; font-weight:500; }
+    .btn-primary { background:#22c55e; color:#021017; }
+    .btn-secondary { background:#0f172a; color:#e5e7eb; border:1px solid #1f2937; }
+    textarea { width:100%; min-height:80px; border-radius:8px; border:1px solid #1f2937; background:#020617; color:#e5e7eb; padding:10px; font-size:14px; resize:vertical; box-sizing:border-box; }
+    pre { background:#020617; border-radius:8px; padding:10px; overflow:auto; font-size:13px; border:1px solid #1f2937; max-height:360px; }
+    @media (max-width:768px) {
+      .container { padding:12px; }
+      .btn-row { flex-direction:column; }
+      button { width:100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>MashPort Analyzer</h1>
+    <div class="status" id="status">Готов к запуску анализа МашПорт vs Katalog-RSS.</div>
+
+    <div class="btn-row">
+      <button class="btn-primary" onclick="runMashPortJob()">Запустить анализ</button>
+      <button class="btn-secondary" onclick="clearOutput()">Очистить вывод</button>
+    </div>
+
+    <label style="font-size:13px; color:#9ca3af;">Дополнительные комментарии / фильтры (опционально):</label>
+    <textarea id="userNotes" placeholder="Например: анализируй только 1620; не трогай уже опубликованные позиции; выгрузи только отсутствующие товары..."></textarea>
+
+    <p style="font-size:13px; color:#9ca3af; margin-top:8px;">
+      Этот интерфейс шлёт задание MAIN‑консультанту, который формирует ТЗ для INDUSTRIAL‑агента и запускает задачу
+      «сравнить каталог Katalog-RSS с площадкой МашПорт». [file:263][file:264]
+    </p>
+
+    <pre id="output">Здесь появится лог/ответ от MAIN‑консультанта и INDUSTRIAL‑агента...</pre>
+  </div>
+</div>
+
+<script>
+const MAIN_ENDPOINT = "http://localhost:3001/process"; // подставь свой реальный URL
+
+async function runMashPortJob() {
+  const status = document.getElementById('status');
+  const output = document.getElementById('output');
+  const notes = document.getElementById('userNotes').value.trim();
+
+  status.textContent = "Отправляю задачу MAIN‑консультанту...";
+  status.style.color = "#facc15";
+
+  const basePrompt = `
+Нужно сравнить каталог Katalog-RSS с площадкой МашПорт.
+
+Цели:
+- найти товары, которые уже есть на МашПорт;
+- найти товары из Katalog-RSS, которых на МашПорт ещё нет;
+- сформировать список отсутствующих товаров для публикации.
+
+Рабочие пути:
+- Katalog-RSS: C:\\GitHub-Repositories\\Katalog-RSS
+- МашПорт: C:\\GitHub-Repositories\\Katalog-RSS\\docs\\PLOSIADKI-RSS\\МашПорт
+
+Сделай задание для INDUSTRIAL-SYSTEMS агента и отправь ему ТЗ в структурированном JSON.
+Если нужно, можешь сразу инициировать выполнение задачи у INDUSTRIAL-SYSTEMS агента.
+`.trim();
+
+  const fullPrompt = basePrompt + (notes ? `\n\nДополнительные пожелания:\n${notes}` : "");
+
+  try {
+    const resp = await fetch(MAIN_ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        query: fullPrompt,
+        userid: "mashport-analyzer-ui"
+      })
+    });
+
+    if (!resp.ok) throw new Error("MAIN‑консультант недоступен: " + resp.status);
+    const data = await resp.json();
+
+    output.textContent = JSON.stringify(data, null, 2);
+    status.textContent = "Готово. Ответ получен.";
+    status.style.color = "#22c55e";
+  } catch (e) {
+    status.textContent = "Ошибка: " + (e.message || "неизвестно");
+    status.style.color = "#f97316";
+  }
+}
+
+function clearOutput() {
+  document.getElementById('output').textContent =
+    "Вывод очищен. Запусти анализ ещё раз.";
+  document.getElementById('status').textContent =
+    "Готов к запуску анализа МашПорт vs Katalog-RSS.";
+  document.getElementById('status').style.color = "#9ca3af";
+}
+</script>
+</body>
+</html>
