@@ -24,3 +24,6 @@
 # Системный мусор
 .DS_Store
 Thumbs.db
+.env
+claude.py
+
