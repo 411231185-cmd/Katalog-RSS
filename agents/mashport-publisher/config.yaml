@@ -1,0 +1,4 @@
+mashport:
+  base_url: "https://mashport.ru"
+  login: "${MASHPORT_LOGIN}"
+  password: "${MASHPORT_PASSWORD}"
