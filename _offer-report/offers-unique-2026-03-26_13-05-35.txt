@@ -1,0 +1,5 @@
+ROOT: C:\GitHub-Repositories\Katalog-RSS
+SCANNED FILES: 1014
+UNIQUE OFFERS: 10816
+REPORT CSV: C:\GitHub-Repositories\Katalog-RSS\_offer-report\offers-unique-2026-03-26_13-05-35.csv
+REPORT JSON: C:\GitHub-Repositories\Katalog-RSS\_offer-report\offers-unique-2026-03-26_13-05-35.json

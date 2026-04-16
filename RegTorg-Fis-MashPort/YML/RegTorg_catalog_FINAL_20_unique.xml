@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<yml_catalog date="2026-02-20 13:43">
+  <shop>
+    <name>Test Shop</name>
+    <company>Test Company</company>
+    <url>http://testshop.ru/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">revolvernye-golovki</category>
+    </categories>
+    <offers>
+      <offer id="188095" available="true">
+        <url>http://testshop.ru/p188095</url>
+        <price>796350</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>http://www.regtorg.ru/imgs/goods/29/10/1522910-photo-big.jpg</picture>
+        <name>Револьверная головка 16М30Ф3</name>
+        <description>Револьверная головка 16М30Ф3.40.000 — это четырехпозиционный инструментальный узел, применяемый в токарных станках с чис...</description>
+        <vendor>nan</vendor>
+        <vendorCode>TEST-188095</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>

@@ -1,0 +1,3 @@
+2026-03-09 18:43:27.040 [error] Error: Code is currently being updated. Please wait for the update to complete before launching.
+    at file:///C:/Users/User/AppData/Local/Programs/Microsoft%20VS%20Code/072586267e/resources/app/out/main.js:176:43937
+    at async q2.a (file:///C:/Users/User/AppData/Local/Programs/Microsoft%20VS%20Code/072586267e/resources/app/out/main.js:176:43369)

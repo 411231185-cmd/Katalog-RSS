@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<yml_catalog date="2026-02-20 13:37">
+  <shop>
+    <name>Test Shop</name>
+    <company>Test Company</company>
+    <url>http://testshop.ru/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Патроны</category>
+      <category id="2">Револьверные головки</category>
+    </categories>
+    <offers>
+      <offer id="1" available="true">
+        <url>http://testshop.ru/p1</url>
+        <price>531250</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Патрон токарный 4-кулачковый ф1000 мм</name>
+        <description>Патрон токарный 4-кулачковый ф1000 мм. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>RSS-0001</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="2" available="true">
+        <url>http://testshop.ru/p2</url>
+        <price>231250</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Патрон токарный 4-кулачковый ф630-800 мм</name>
+        <description>Патрон токарный 4-кулачковый ф630-800 мм. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>RSS-0002</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+      <offer id="3" available="true">
+        <url>http://testshop.ru/p3</url>
+        <price>262500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg</picture>
+        <name>Револьверная головка для станков с ЧПУ</name>
+        <description>Револьверная головка для станков с ЧПУ. Запасная часть для металлорежущих станков. Подбор и изготовление по техзаданию.</description>
+        <vendor>ТД РУССтанкоСбыт</vendor>
+        <vendorCode>RSS-0003</vendorCode>
+        <country_of_origin>Россия</country_of_origin>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>

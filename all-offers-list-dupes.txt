@@ -1,0 +1,8 @@
+- (Дублирует оффер 9.7)
+- (Описан в оффере 7.6)
+- (Select-String -Path "docs\ТКП\*\*\README.md" -Pattern "AUTOBEGIN KIN1" -SimpleMatch).Count
+- (Select-String -Path "docs\ТКП\*\*\README.md" -Pattern "AUTOBEGIN KIN2" -SimpleMatch).Count
+- [ ] [Задача 2] — [описание, 1-2 строки]
+- [ ] [Задача 2] — [описание]
+- [ ] [Задача 3] — [описание, 1-2 строки]
+- [ ] [Задача 3] — [описание]

@@ -1,0 +1,15 @@
+name: "МашПорт Публикатор"
+id: mashport-publisher
+version: "2.0.0"
+description: "Публикация товаров на mashport.ru через Playwright"
+capabilities:
+  - publish_product
+  - update_listing
+  - check_status
+  - dry_run
+input_params:
+  - product_id: str (optional)
+  - all: bool
+  - dry_run: bool
+telegram_notify: true
+schedule: "0 9 * * *"  # каждый день в 9:00

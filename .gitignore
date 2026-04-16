@@ -1,4 +1,27 @@
-﻿# Tilda page exports
-*тильда прайс*
+# Секреты и ключи
+.env
+.env.*
+!.env.example
+*.env
+secrets.json
+*secret*
+*token*
+*apikey*
+*api_key*
+claude.py
+*credentials*
+
+# Python
 __pycache__/
-Kluchi.env
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# VS Code
+.vscode/settings.json
+
+# Конфиги с данными
+core/config/account_balances*.json
+core/config/business-data.json
+.aider*

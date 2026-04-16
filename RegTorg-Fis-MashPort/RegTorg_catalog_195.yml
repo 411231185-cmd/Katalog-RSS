@@ -1,0 +1,3009 @@
+yml_catalog:
+  '@date': 2026-02-18 20:57
+  shop:
+    name: ТД РУССтанкоСбыт
+    company: ТД РУССтанкоСбыт
+    url: https://tdrusstankosbyt.ru/
+    currencies:
+      currency:
+      - id: RUR
+        rate: '1'
+    categories:
+      category:
+      - id: 1
+        name: Валы
+      - id: 2
+        name: Вилки переключения
+      - id: 3
+        name: Винтовые пары
+      - id: 4
+        name: Винты подачи
+      - id: 5
+        name: Винты ходовые
+      - id: 6
+        name: Втулки
+      - id: 7
+        name: Гайки
+      - id: 8
+        name: Гайки маточные
+      - id: 9
+        name: Диски фрикционные
+      - id: 10
+        name: Клинья
+      - id: 11
+        name: Комплектующие станины
+      - id: 12
+        name: Комплекты
+      - id: 13
+        name: Коробки подач
+      - id: 14
+        name: Кулачки
+      - id: 15
+        name: Кулачки для патронов
+      - id: 16
+        name: Люнеты
+      - id: 17
+        name: Муфты
+      - id: 18
+        name: Муфты обгонные
+      - id: 19
+        name: Муфты фрикционные
+      - id: 20
+        name: Муфты электромагнитные
+      - id: 21
+        name: Насосы
+      - id: 22
+        name: Ограждения
+      - id: 23
+        name: Опоры
+      - id: 24
+        name: Очистители
+      - id: 25
+        name: Патроны токарные
+      - id: 26
+        name: Пиноли
+      - id: 27
+        name: Подшипники
+      - id: 28
+        name: Револьверные головки
+      - id: 29
+        name: Резцедержатели
+      - id: 30
+        name: Рейки зубчатые
+      - id: 31
+        name: Ремни приводные
+      - id: 32
+        name: СОЖ
+      - id: 33
+        name: Суппорты токарные
+      - id: 34
+        name: ШВП
+      - id: 35
+        name: Шарико-винтовые пары
+      - id: 36
+        name: Шестерни
+      - id: 37
+        name: Шестерни зубчатые
+      - id: 38
+        name: Шкивы
+      - id: 39
+        name: Шпиндели
+      - id: 40
+        name: Щетки
+      - id: 41
+        name: Электрика
+    offers:
+      offer:
+      - id: RSS-0001
+        available: 'true'
+        name: Патрон токарный 4-кулачковый Ø1000мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0001
+        description: Патрон токарный четырехкулачковый с независимым перемещением
+          кулачков для тяжелых токарных станков. Применяется на станках 1Н65, РТ117.
+        price: 531250.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 4-кулачковый Ø1000мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0002
+        available: 'true'
+        name: Патрон токарный 4-кулачковый Ø630-800мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0002
+        description: Патрон токарный четырехкулачковый для тяжелых токарных станков.
+          Высокоточный зажим заготовок.
+        price: 231250.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 4-кулачковый Ø630-800мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0003
+        available: 'true'
+        name: Револьверная головка для станков с ЧПУ
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0003
+        description: Револьверная головка для токарных станков с ЧПУ. Для быстрой
+          смены инструмента.
+        price: 262500.0
+        currencyId: RUR
+        categoryId: 28
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Револьверная головка для станков с ЧПУ, Револьверные головки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0004
+        available: 'true'
+        name: ШВП шарико-винтовая пара для станков с ЧПУ
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0004
+        description: Шарико-винтовая пара (ШВП) для станков с ЧПУ. Обеспечивает высокоточное
+          перемещение.
+        price: 206250.0
+        currencyId: RUR
+        categoryId: 35
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: ШВП шарико-винтовая пара для станков с ЧПУ, Шарико-винтовые пары,
+          запчасти для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0005
+        available: 'true'
+        name: Суппорт токарный в сборе с резцедержателем
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0005
+        description: Суппорт токарный в сборе с резцедержателем. Узел для восстановления
+          геометрии и точности.
+        price: 154343.75
+        currencyId: RUR
+        categoryId: 33
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Суппорт токарный в сборе с резцедержателем, Суппорты токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0006
+        available: 'true'
+        name: Шпиндель токарного станка в сборе
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0006
+        description: Шпиндель токарного станка в сборе. Высокоточная обработка посадочных
+          поверхностей.
+        price: 134375.0
+        currencyId: RUR
+        categoryId: 39
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шпиндель токарного станка в сборе, Шпиндели, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0007
+        available: 'true'
+        name: Люнет неподвижный для тяжелых станков
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0007
+        description: Люнет неподвижный для поддержки длинных заготовок на тяжелых
+          токарных станках.
+        price: 218750.0
+        currencyId: RUR
+        categoryId: 16
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Люнет неподвижный для тяжелых станков, Люнеты, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0008
+        available: 'true'
+        name: Резцедержатель четырехпозиционный
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0008
+        description: Резцедержатель четырехпозиционный. Быстрая смена инструмента
+          и стабильность зажима.
+        price: 100000.0
+        currencyId: RUR
+        categoryId: 29
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Резцедержатель четырехпозиционный, Резцедержатели, запчасти для
+          станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0009
+        available: 'true'
+        name: Поддержка ходового винта и вала в сборе
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0009
+        description: Поддержка ходового винта и вала в сборе. Узел для стабильности
+          подач.
+        price: 120000.0
+        currencyId: RUR
+        categoryId: 11
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Поддержка ходового винта и вала в сборе, Комплектующие станины,
+          запчасти для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0010
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø250-400мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0010
+        description: Патрон токарный трехкулачковый самоцентрирующий. Для быстрой
+          установки заготовок.
+        price: 95000.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø250-400мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0011
+        available: 'true'
+        name: Шестерня зубчатая (универсальная)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0011
+        description: Шестерня зубчатая для коробок скоростей и подач. Термообработка,
+          контроль биения.
+        price: 17500.0
+        currencyId: RUR
+        categoryId: 37
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня зубчатая (универсальная), Шестерни зубчатые, запчасти для
+          станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0012
+        available: 'true'
+        name: Кулачки прямые для патрона (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0012
+        description: Кулачки прямые для токарных патронов. Закаленные, шлифованные.
+          Комплект.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 15
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона (комплект), Кулачки для патронов, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0013
+        available: 'true'
+        name: Диски фрикционные (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0013
+        description: Диски фрикционные для узлов сцепления. Стабильный коэффициент
+          трения.
+        price: 15625.0
+        currencyId: RUR
+        categoryId: 9
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Диски фрикционные (комплект), Диски фрикционные, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0014
+        available: 'true'
+        name: Гайка маточная ходового винта (разрезная)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0014
+        description: Гайка маточная ходового винта. Компенсация люфта, точная подгонка.
+        price: 18750.0
+        currencyId: RUR
+        categoryId: 8
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка маточная ходового винта (разрезная), Гайки маточные, запчасти
+          для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0015
+        available: 'true'
+        name: Муфта фрикционная в сборе
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0015
+        description: Муфта фрикционная в сборе. Для восстановления стабильной передачи
+          момента.
+        price: 56250.0
+        currencyId: RUR
+        categoryId: 19
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Муфта фрикционная в сборе, Муфты фрикционные, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0016
+        available: 'true'
+        name: Муфта обгонная
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0016
+        description: Муфта обгонная. Предотвращает обратное вращение узлов.
+        price: 54687.5
+        currencyId: RUR
+        categoryId: 18
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Муфта обгонная, Муфты обгонные, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0017
+        available: 'true'
+        name: Вал-шестерня
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0017
+        description: Вал-шестерня. Термообработка, шлифовка посадок, контроль твердости.
+        price: 45000.0
+        currencyId: RUR
+        categoryId: 1
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Вал-шестерня, Валы, запчасти для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0018
+        available: 'true'
+        name: Насос масляный
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0018
+        description: Насос масляный для систем смазки узлов станка. Проверка производительности.
+        price: 18750.0
+        currencyId: RUR
+        categoryId: 21
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Насос масляный, Насосы, запчасти для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0019
+        available: 'true'
+        name: Шкив главного привода
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0019
+        description: Шкив главного привода. Балансировка, контроль биения ручьев.
+        price: 23750.0
+        currencyId: RUR
+        categoryId: 38
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шкив главного привода, Шкивы, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0020
+        available: 'true'
+        name: Винт ходовой
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0020
+        description: Винт ходовой. Трапецеидальная резьба, закалка, шлифовка.
+        price: 115312.5
+        currencyId: RUR
+        categoryId: 5
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт ходовой, Винты ходовые, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0021
+        available: 'true'
+        name: Рейка зубчатая (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0021
+        description: Рейка зубчатая (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 46875.0
+        currencyId: RUR
+        categoryId: 30
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Рейка зубчатая (комплект), Рейки зубчатые, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0022
+        available: 'true'
+        name: Опоры ходового винта (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0022
+        description: Опоры ходового винта (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 69375.0
+        currencyId: RUR
+        categoryId: 23
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Опоры ходового винта (комплект), Опоры, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0023
+        available: 'true'
+        name: Клинья направляющих (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0023
+        description: Клинья направляющих (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 9375.0
+        currencyId: RUR
+        categoryId: 10
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Клинья направляющих (комплект), Клинья, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0024
+        available: 'true'
+        name: Очистители направляющих (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0024
+        description: Очистители направляющих (комплект) для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 5000.0
+        currencyId: RUR
+        categoryId: 24
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Очистители направляющих (комплект), Очистители, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0025
+        available: 'true'
+        name: Подшипники шпинделя (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0025
+        description: Подшипники шпинделя (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 59375.0
+        currencyId: RUR
+        categoryId: 27
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Подшипники шпинделя (комплект), Подшипники, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0026
+        available: 'true'
+        name: Вилки переключения (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0026
+        description: Вилки переключения (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 12500.0
+        currencyId: RUR
+        categoryId: 2
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Вилки переключения (комплект), Вилки переключения, запчасти для
+          станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0027
+        available: 'true'
+        name: Ремни главного привода (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0027
+        description: Ремни главного привода (комплект) для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 8125.0
+        currencyId: RUR
+        categoryId: 31
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Ремни главного привода (комплект), Ремни приводные, запчасти для
+          станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0028
+        available: 'true'
+        name: Пиноль задней бабки
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0028
+        description: Пиноль задней бабки для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 59375.0
+        currencyId: RUR
+        categoryId: 26
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Пиноль задней бабки, Пиноли, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0029
+        available: 'true'
+        name: Винтовая пара пиноли
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0029
+        description: Винтовая пара пиноли для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 34375.0
+        currencyId: RUR
+        categoryId: 3
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винтовая пара пиноли, Винтовые пары, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0030
+        available: 'true'
+        name: Винт поперечной подачи
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0030
+        description: Винт поперечной подачи для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 31250.0
+        currencyId: RUR
+        categoryId: 4
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт поперечной подачи, Винты подачи, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0031
+        available: 'true'
+        name: Гайка поперечной подачи (бронза)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0031
+        description: Гайка поперечной подачи (бронза) для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17500.0
+        currencyId: RUR
+        categoryId: 7
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка поперечной подачи (бронза), Гайки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0032
+        available: 'true'
+        name: Электромагнитная муфта (ЭТМ)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0032
+        description: Электромагнитная муфта (ЭТМ) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 20625.0
+        currencyId: RUR
+        categoryId: 20
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Электромагнитная муфта (ЭТМ), Муфты электромагнитные, запчасти для
+          станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0033
+        available: 'true'
+        name: Щетки и щеткодержатели
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0033
+        description: Щетки и щеткодержатели для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 6875.0
+        currencyId: RUR
+        categoryId: 40
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Щетки и щеткодержатели, Щетки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0034
+        available: 'true'
+        name: Шестерня фартука
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0034
+        description: Шестерня фартука для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 11250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня фартука, Шестерни, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0035
+        available: 'true'
+        name: Коробка подач в сборе
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0035
+        description: Коробка подач в сборе для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 206250.0
+        currencyId: RUR
+        categoryId: 13
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Коробка подач в сборе, Коробки подач, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0036
+        available: 'true'
+        name: Комплект сменных шестерен
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0036
+        description: Комплект сменных шестерен для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 40625.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект сменных шестерен, Шестерни, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0037
+        available: 'true'
+        name: Втулки под шестерни
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0037
+        description: Втулки под шестерни для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 3437.5
+        currencyId: RUR
+        categoryId: 6
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Втулки под шестерни, Втулки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0038
+        available: 'true'
+        name: Люнет неподвижный (16К20)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0038
+        description: Люнет неподвижный (16К20) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 70000.0
+        currencyId: RUR
+        categoryId: 16
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Люнет неподвижный (16К20), Люнеты, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0039
+        available: 'true'
+        name: Люнет подвижный
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0039
+        description: Люнет подвижный для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 100000.0
+        currencyId: RUR
+        categoryId: 16
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Люнет подвижный, Люнеты, запчасти для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0040
+        available: 'true'
+        name: Ролики люнета (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0040
+        description: Ролики люнета (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 15625.0
+        currencyId: RUR
+        categoryId: 16
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Ролики люнета (комплект), Люнеты, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0041
+        available: 'true'
+        name: ШВП продольной подачи
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0041
+        description: ШВП продольной подачи для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 143750.0
+        currencyId: RUR
+        categoryId: 34
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: ШВП продольной подачи, ШВП, запчасти для станков, комплектующие
+          станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0042
+        available: 'true'
+        name: Муфта сильфонная
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0042
+        description: Муфта сильфонная для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 6875.0
+        currencyId: RUR
+        categoryId: 17
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Муфта сильфонная, Муфты, запчасти для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0043
+        available: 'true'
+        name: Насос СОЖ
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0043
+        description: Насос СОЖ для металлорежущих станков. Высокое качество изготовления,
+          контроль геометрии и посадок.
+        price: 12500.0
+        currencyId: RUR
+        categoryId: 32
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Насос СОЖ, СОЖ, запчасти для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0044
+        available: 'true'
+        name: Магнитный пускатель
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0044
+        description: Магнитный пускатель для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 9375.0
+        currencyId: RUR
+        categoryId: 41
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Магнитный пускатель, Электрика, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0045
+        available: 'true'
+        name: Автоматический выключатель
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0045
+        description: Автоматический выключатель для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 6250.0
+        currencyId: RUR
+        categoryId: 41
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Автоматический выключатель, Электрика, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0046
+        available: 'true'
+        name: Трансформатор 380/24В
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0046
+        description: Трансформатор 380/24В для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 12500.0
+        currencyId: RUR
+        categoryId: 41
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Трансформатор 380/24В, Электрика, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0047
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0047
+        description: Шестерня цилиндрическая модуль 2 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0048
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0048
+        description: Шестерня цилиндрическая модуль 2 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0049
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0049
+        description: Шестерня цилиндрическая модуль 2 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0050
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0050
+        description: Шестерня цилиндрическая модуль 2 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0051
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0051
+        description: Шестерня цилиндрическая модуль 2 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0052
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0052
+        description: Шестерня цилиндрическая модуль 2 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0053
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0053
+        description: Шестерня цилиндрическая модуль 2.5 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0054
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0054
+        description: Шестерня цилиндрическая модуль 2.5 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0055
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0055
+        description: Шестерня цилиндрическая модуль 2.5 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0056
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0056
+        description: Шестерня цилиндрическая модуль 2.5 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0057
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0057
+        description: Шестерня цилиндрическая модуль 2.5 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0058
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 2.5 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0058
+        description: Шестерня цилиндрическая модуль 2.5 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 7812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 2.5 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0059
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0059
+        description: Шестерня цилиндрическая модуль 3 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0060
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0060
+        description: Шестерня цилиндрическая модуль 3 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0061
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0061
+        description: Шестерня цилиндрическая модуль 3 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0062
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0062
+        description: Шестерня цилиндрическая модуль 3 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0063
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0063
+        description: Шестерня цилиндрическая модуль 3 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0064
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 3 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0064
+        description: Шестерня цилиндрическая модуль 3 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 10312.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 3 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0065
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0065
+        description: Шестерня цилиндрическая модуль 4 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0066
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0066
+        description: Шестерня цилиндрическая модуль 4 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0067
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0067
+        description: Шестерня цилиндрическая модуль 4 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0068
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0068
+        description: Шестерня цилиндрическая модуль 4 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0069
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0069
+        description: Шестерня цилиндрическая модуль 4 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0070
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 4 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0070
+        description: Шестерня цилиндрическая модуль 4 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14687.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 4 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0071
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0071
+        description: Шестерня цилиндрическая модуль 5 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0072
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0072
+        description: Шестерня цилиндрическая модуль 5 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0073
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0073
+        description: Шестерня цилиндрическая модуль 5 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0074
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0074
+        description: Шестерня цилиндрическая модуль 5 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0075
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0075
+        description: Шестерня цилиндрическая модуль 5 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0076
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 5 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0076
+        description: Шестерня цилиндрическая модуль 5 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 17812.5
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 5 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0077
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0077
+        description: Шестерня цилиндрическая модуль 6 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0078
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0078
+        description: Шестерня цилиндрическая модуль 6 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0079
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0079
+        description: Шестерня цилиндрическая модуль 6 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0080
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0080
+        description: Шестерня цилиндрическая модуль 6 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0081
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0081
+        description: Шестерня цилиндрическая модуль 6 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0082
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 6 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0082
+        description: Шестерня цилиндрическая модуль 6 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 21250.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 6 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0083
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0083
+        description: Шестерня цилиндрическая модуль 8 Z20 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z20, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0084
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0084
+        description: Шестерня цилиндрическая модуль 8 Z25 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z25, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0085
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0085
+        description: Шестерня цилиндрическая модуль 8 Z30 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z30, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0086
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0086
+        description: Шестерня цилиндрическая модуль 8 Z35 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z35, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0087
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0087
+        description: Шестерня цилиндрическая модуль 8 Z40 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z40, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0088
+        available: 'true'
+        name: Шестерня цилиндрическая модуль 8 Z45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0088
+        description: Шестерня цилиндрическая модуль 8 Z45 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 27500.0
+        currencyId: RUR
+        categoryId: 36
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Шестерня цилиндрическая модуль 8 Z45, Шестерни, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0089
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø200мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0089
+        description: Патрон токарный 3-кулачковый Ø200мм для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 43750.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø200мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0090
+        available: 'true'
+        name: Кулачки прямые для патрона Ø200мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0090
+        description: Кулачки прямые для патрона Ø200мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона Ø200мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0091
+        available: 'true'
+        name: Кулачки обратные для патрона Ø200мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0091
+        description: Кулачки обратные для патрона Ø200мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки обратные для патрона Ø200мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0092
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø250мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0092
+        description: Патрон токарный 3-кулачковый Ø250мм для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 53125.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø250мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0093
+        available: 'true'
+        name: Кулачки прямые для патрона Ø250мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0093
+        description: Кулачки прямые для патрона Ø250мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона Ø250мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0094
+        available: 'true'
+        name: Кулачки обратные для патрона Ø250мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0094
+        description: Кулачки обратные для патрона Ø250мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки обратные для патрона Ø250мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0095
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø315мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0095
+        description: Патрон токарный 3-кулачковый Ø315мм для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 68750.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø315мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0096
+        available: 'true'
+        name: Кулачки прямые для патрона Ø315мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0096
+        description: Кулачки прямые для патрона Ø315мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона Ø315мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0097
+        available: 'true'
+        name: Кулачки обратные для патрона Ø315мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0097
+        description: Кулачки обратные для патрона Ø315мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки обратные для патрона Ø315мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0098
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø400мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0098
+        description: Патрон токарный 3-кулачковый Ø400мм для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 95000.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø400мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0099
+        available: 'true'
+        name: Кулачки прямые для патрона Ø400мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0099
+        description: Кулачки прямые для патрона Ø400мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона Ø400мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0100
+        available: 'true'
+        name: Кулачки обратные для патрона Ø400мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0100
+        description: Кулачки обратные для патрона Ø400мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки обратные для патрона Ø400мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0101
+        available: 'true'
+        name: Патрон токарный 3-кулачковый Ø500мм
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0101
+        description: Патрон токарный 3-кулачковый Ø500мм для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 125000.0
+        currencyId: RUR
+        categoryId: 25
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Патрон токарный 3-кулачковый Ø500мм, Патроны токарные, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0102
+        available: 'true'
+        name: Кулачки прямые для патрона Ø500мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0102
+        description: Кулачки прямые для патрона Ø500мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки прямые для патрона Ø500мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0103
+        available: 'true'
+        name: Кулачки обратные для патрона Ø500мм (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0103
+        description: Кулачки обратные для патрона Ø500мм (комплект) для металлорежущих
+          станков. Высокое качество изготовления, контроль геометрии и посадок.
+        price: 55000.0
+        currencyId: RUR
+        categoryId: 14
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кулачки обратные для патрона Ø500мм (комплект), Кулачки, запчасти
+          для станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0104
+        available: 'true'
+        name: Винт ходовой трапецеидальный 32×6
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0104
+        description: Винт ходовой трапецеидальный 32×6 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 62500.0
+        currencyId: RUR
+        categoryId: 5
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт ходовой трапецеидальный 32×6, Винты ходовые, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0105
+        available: 'true'
+        name: Гайка к винту 32×6 (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0105
+        description: Гайка к винту 32×6 (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 20625.0
+        currencyId: RUR
+        categoryId: 7
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка к винту 32×6 (комплект), Гайки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0106
+        available: 'true'
+        name: Винт ходовой трапецеидальный 44×8
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0106
+        description: Винт ходовой трапецеидальный 44×8 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 93750.0
+        currencyId: RUR
+        categoryId: 5
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт ходовой трапецеидальный 44×8, Винты ходовые, запчасти для станков,
+          комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0107
+        available: 'true'
+        name: Гайка к винту 44×8 (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0107
+        description: Гайка к винту 44×8 (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 20625.0
+        currencyId: RUR
+        categoryId: 7
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка к винту 44×8 (комплект), Гайки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0108
+        available: 'true'
+        name: Винт ходовой трапецеидальный 48×12
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0108
+        description: Винт ходовой трапецеидальный 48×12 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 115312.5
+        currencyId: RUR
+        categoryId: 5
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт ходовой трапецеидальный 48×12, Винты ходовые, запчасти для
+          станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0109
+        available: 'true'
+        name: Гайка к винту 48×12 (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0109
+        description: Гайка к винту 48×12 (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 20625.0
+        currencyId: RUR
+        categoryId: 7
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка к винту 48×12 (комплект), Гайки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0110
+        available: 'true'
+        name: Винт ходовой трапецеидальный 90×24
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0110
+        description: Винт ходовой трапецеидальный 90×24 для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 153125.0
+        currencyId: RUR
+        categoryId: 5
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Винт ходовой трапецеидальный 90×24, Винты ходовые, запчасти для
+          станков, комплектующие станков
+        sales_notes: опт/розница
+        country_of_origin: Россия
+      - id: RSS-0111
+        available: 'true'
+        name: Гайка к винту 90×24 (комплект)
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0111
+        description: Гайка к винту 90×24 (комплект) для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 20625.0
+        currencyId: RUR
+        categoryId: 7
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Гайка к винту 90×24 (комплект), Гайки, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0112
+        available: 'true'
+        name: Подшипник шпинделя радиальный
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0112
+        description: Подшипник шпинделя радиальный для металлорежущих станков. Высокое
+          качество изготовления, контроль геометрии и посадок.
+        price: 14375.0
+        currencyId: RUR
+        categoryId: 27
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Подшипник шпинделя радиальный, Подшипники, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0113
+        available: 'true'
+        name: Подшипник шпинделя радиально-упорный
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0113
+        description: Подшипник шпинделя радиально-упорный для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14375.0
+        currencyId: RUR
+        categoryId: 27
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Подшипник шпинделя радиально-упорный, Подшипники, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0114
+        available: 'true'
+        name: Подшипник шпинделя роликовый конический
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0114
+        description: Подшипник шпинделя роликовый конический для металлорежущих станков.
+          Высокое качество изготовления, контроль геометрии и посадок.
+        price: 14375.0
+        currencyId: RUR
+        categoryId: 27
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Подшипник шпинделя роликовый конический, Подшипники, запчасти для
+          станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0115
+        available: 'true'
+        name: Ограждение патрона
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0115
+        description: Ограждение патрона для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 11250.0
+        currencyId: RUR
+        categoryId: 22
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Ограждение патрона, Ограждения, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0116
+        available: 'true'
+        name: Кожух ремней
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0116
+        description: Кожух ремней для металлорежущих станков. Высокое качество изготовления,
+          контроль геометрии и посадок.
+        price: 11250.0
+        currencyId: RUR
+        categoryId: 22
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кожух ремней, Ограждения, запчасти для станков, комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0117
+        available: 'true'
+        name: Кожух сменных колес
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0117
+        description: Кожух сменных колес для металлорежущих станков. Высокое качество
+          изготовления, контроль геометрии и посадок.
+        price: 11250.0
+        currencyId: RUR
+        categoryId: 22
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Кожух сменных колес, Ограждения, запчасти для станков, комплектующие
+          станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0118
+        available: 'true'
+        name: Комплект ЗИП для узла станка №1
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0118
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №1, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0119
+        available: 'true'
+        name: Комплект ЗИП для узла станка №2
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0119
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №2, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0120
+        available: 'true'
+        name: Комплект ЗИП для узла станка №3
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0120
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №3, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0121
+        available: 'true'
+        name: Комплект ЗИП для узла станка №4
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0121
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №4, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0122
+        available: 'true'
+        name: Комплект ЗИП для узла станка №5
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0122
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №5, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0123
+        available: 'true'
+        name: Комплект ЗИП для узла станка №6
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0123
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №6, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0124
+        available: 'true'
+        name: Комплект ЗИП для узла станка №7
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0124
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №7, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0125
+        available: 'true'
+        name: Комплект ЗИП для узла станка №8
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0125
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №8, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0126
+        available: 'true'
+        name: Комплект ЗИП для узла станка №9
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0126
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №9, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0127
+        available: 'true'
+        name: Комплект ЗИП для узла станка №10
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0127
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №10, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0128
+        available: 'true'
+        name: Комплект ЗИП для узла станка №11
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0128
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №11, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0129
+        available: 'true'
+        name: Комплект ЗИП для узла станка №12
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0129
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №12, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0130
+        available: 'true'
+        name: Комплект ЗИП для узла станка №13
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0130
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №13, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0131
+        available: 'true'
+        name: Комплект ЗИП для узла станка №14
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0131
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №14, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0132
+        available: 'true'
+        name: Комплект ЗИП для узла станка №15
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0132
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №15, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0133
+        available: 'true'
+        name: Комплект ЗИП для узла станка №16
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0133
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №16, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0134
+        available: 'true'
+        name: Комплект ЗИП для узла станка №17
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0134
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №17, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0135
+        available: 'true'
+        name: Комплект ЗИП для узла станка №18
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0135
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №18, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0136
+        available: 'true'
+        name: Комплект ЗИП для узла станка №19
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0136
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №19, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0137
+        available: 'true'
+        name: Комплект ЗИП для узла станка №20
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0137
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №20, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0138
+        available: 'true'
+        name: Комплект ЗИП для узла станка №21
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0138
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №21, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0139
+        available: 'true'
+        name: Комплект ЗИП для узла станка №22
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0139
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №22, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0140
+        available: 'true'
+        name: Комплект ЗИП для узла станка №23
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0140
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №23, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0141
+        available: 'true'
+        name: Комплект ЗИП для узла станка №24
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0141
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №24, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0142
+        available: 'true'
+        name: Комплект ЗИП для узла станка №25
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0142
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №25, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0143
+        available: 'true'
+        name: Комплект ЗИП для узла станка №26
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0143
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №26, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0144
+        available: 'true'
+        name: Комплект ЗИП для узла станка №27
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0144
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №27, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0145
+        available: 'true'
+        name: Комплект ЗИП для узла станка №28
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0145
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №28, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0146
+        available: 'true'
+        name: Комплект ЗИП для узла станка №29
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0146
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №29, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0147
+        available: 'true'
+        name: Комплект ЗИП для узла станка №30
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0147
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №30, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0148
+        available: 'true'
+        name: Комплект ЗИП для узла станка №31
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0148
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №31, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0149
+        available: 'true'
+        name: Комплект ЗИП для узла станка №32
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0149
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №32, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0150
+        available: 'true'
+        name: Комплект ЗИП для узла станка №33
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0150
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №33, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0151
+        available: 'true'
+        name: Комплект ЗИП для узла станка №34
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0151
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №34, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0152
+        available: 'true'
+        name: Комплект ЗИП для узла станка №35
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0152
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №35, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0153
+        available: 'true'
+        name: Комплект ЗИП для узла станка №36
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0153
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №36, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0154
+        available: 'true'
+        name: Комплект ЗИП для узла станка №37
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0154
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №37, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0155
+        available: 'true'
+        name: Комплект ЗИП для узла станка №38
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0155
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №38, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0156
+        available: 'true'
+        name: Комплект ЗИП для узла станка №39
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0156
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №39, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0157
+        available: 'true'
+        name: Комплект ЗИП для узла станка №40
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0157
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №40, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0158
+        available: 'true'
+        name: Комплект ЗИП для узла станка №41
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0158
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №41, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0159
+        available: 'true'
+        name: Комплект ЗИП для узла станка №42
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0159
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №42, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0160
+        available: 'true'
+        name: Комплект ЗИП для узла станка №43
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0160
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №43, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0161
+        available: 'true'
+        name: Комплект ЗИП для узла станка №44
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0161
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №44, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0162
+        available: 'true'
+        name: Комплект ЗИП для узла станка №45
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0162
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №45, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0163
+        available: 'true'
+        name: Комплект ЗИП для узла станка №46
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0163
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №46, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0164
+        available: 'true'
+        name: Комплект ЗИП для узла станка №47
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0164
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №47, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0165
+        available: 'true'
+        name: Комплект ЗИП для узла станка №48
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0165
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №48, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0166
+        available: 'true'
+        name: Комплект ЗИП для узла станка №49
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0166
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №49, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0167
+        available: 'true'
+        name: Комплект ЗИП для узла станка №50
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0167
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №50, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0168
+        available: 'true'
+        name: Комплект ЗИП для узла станка №51
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0168
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №51, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0169
+        available: 'true'
+        name: Комплект ЗИП для узла станка №52
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0169
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №52, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0170
+        available: 'true'
+        name: Комплект ЗИП для узла станка №53
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0170
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №53, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0171
+        available: 'true'
+        name: Комплект ЗИП для узла станка №54
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0171
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №54, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0172
+        available: 'true'
+        name: Комплект ЗИП для узла станка №55
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0172
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №55, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0173
+        available: 'true'
+        name: Комплект ЗИП для узла станка №56
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0173
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №56, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0174
+        available: 'true'
+        name: Комплект ЗИП для узла станка №57
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0174
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №57, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0175
+        available: 'true'
+        name: Комплект ЗИП для узла станка №58
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0175
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №58, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0176
+        available: 'true'
+        name: Комплект ЗИП для узла станка №59
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0176
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №59, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0177
+        available: 'true'
+        name: Комплект ЗИП для узла станка №60
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0177
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №60, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0178
+        available: 'true'
+        name: Комплект ЗИП для узла станка №61
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0178
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №61, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0179
+        available: 'true'
+        name: Комплект ЗИП для узла станка №62
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0179
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №62, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0180
+        available: 'true'
+        name: Комплект ЗИП для узла станка №63
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0180
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №63, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0181
+        available: 'true'
+        name: Комплект ЗИП для узла станка №64
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0181
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №64, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0182
+        available: 'true'
+        name: Комплект ЗИП для узла станка №65
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0182
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №65, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0183
+        available: 'true'
+        name: Комплект ЗИП для узла станка №66
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0183
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №66, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0184
+        available: 'true'
+        name: Комплект ЗИП для узла станка №67
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0184
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №67, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0185
+        available: 'true'
+        name: Комплект ЗИП для узла станка №68
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0185
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №68, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0186
+        available: 'true'
+        name: Комплект ЗИП для узла станка №69
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0186
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №69, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0187
+        available: 'true'
+        name: Комплект ЗИП для узла станка №70
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0187
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №70, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0188
+        available: 'true'
+        name: Комплект ЗИП для узла станка №71
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0188
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №71, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0189
+        available: 'true'
+        name: Комплект ЗИП для узла станка №72
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0189
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №72, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0190
+        available: 'true'
+        name: Комплект ЗИП для узла станка №73
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0190
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №73, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0191
+        available: 'true'
+        name: Комплект ЗИП для узла станка №74
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0191
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №74, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0192
+        available: 'true'
+        name: Комплект ЗИП для узла станка №75
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0192
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №75, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0193
+        available: 'true'
+        name: Комплект ЗИП для узла станка №76
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0193
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №76, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0194
+        available: 'true'
+        name: Комплект ЗИП для узла станка №77
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0194
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №77, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
+      - id: RSS-0195
+        available: 'true'
+        name: Комплект ЗИП для узла станка №78
+        vendor: ТД РУССтанкоСбыт
+        vendorCode: Art-0195
+        description: Комплект запасных частей для планового ремонта узла станка. Подбор
+          по техзаданию.
+        price: 37500.0
+        currencyId: RUR
+        categoryId: 12
+        picture: https://static.tildacdn.com/tild3235-6334-4536-b430-656238613562/image.jpg
+        keywords: Комплект ЗИП для узла станка №78, Комплекты, запчасти для станков,
+          комплектующие станков
+        sales_notes: розница
+        country_of_origin: Россия
