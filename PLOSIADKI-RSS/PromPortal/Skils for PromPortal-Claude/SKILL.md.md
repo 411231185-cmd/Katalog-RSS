@@ -176,7 +176,7 @@ text
 
 ## Источники данных (приоритет)
 
-1. GitHub репо Katalog-RSS — основной источник
-2. russtanko.ru / russtanko-rzn.ru — официальный сайт компании
-3. stankilife.ru / vse-k-stankam.ru — технические описания
-4. kpsk.ru / stankoartel.com — конкурентный анализ
+   
+1. russtanko.ru / russtanko-rzn.ru — официальный сайт компании
+2. stankilife.ru / vse-k-stankam.ru — технические описания
+3. kpsk.ru / stankoartel.com — конкурентный анализ
